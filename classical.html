@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classical</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    
+    <audio preload='auto' id="audio">
+    </audio>
+    <div>
+        <div class="responses">
+            <div class="final">
+                Final Score: &NonBreakingSpace;
+                <div id="fpoints" class="fpoints">
+                    
+                </div>
+                Num Question: &NonBreakingSpace;
+                <div id="fques" class="fques">
+
+                </div>
+            </div>
+            <div class="store">
+                Points: &NonBreakingSpace;
+                <div id="points" class="points">
+                    
+                </div>
+            </div>
+            <table class="res">
+                <tr>
+                    <td>
+                        Guesses:
+                    </td>
+                    <td id="nameAns" class="nameAns">
+                        Composer
+                    </td>
+                    <td id="instruAns" class="instruAns">
+                        Instruments
+                    </td>
+                    <td id="formAns" class="formAns">
+                        Form
+                    </td>
+                    <td id="NoAns" class="NoAns">
+                        No
+                    </td>
+                    <td id="Key" class="Key">
+                        Key
+                    </td>
+                    <td id="Ops" class="Ops">
+                        Ops
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+    <div class="titleSlide">
+        <div class="flex-center flex-column">
+            <div class="buttons">
+                <button onclick="playAudio(startTime, j)" class="buttong b1">Play Audio</button>
+                <button onclick="pauseAudio()" class="buttong b2">pause audio</button> 
+                <button onclick="Submit()" class="buttong b3">Submit</button>
+                <button onclick="nextQuestion()" class="buttong b4">Next Question</button>
+            </div>
+            <br>
+            <p> Composer:</p>
+            <table id="composers">
+                <tr>
+                <td><button id='1' class="com compose1">Albinoni</button></td>
+                <td><button id='2' class="com compose2">J.S Bach</button></td>
+                <td><button id='6' class="com compose6">Barber</button></td>
+                <td><button id='1' class="com compose1">Bartók </button></td>
+                <td><button id='5' class="com compose5">Beethoven</button></td>
+                <td><button id='3' class="com compose3">Berlioz</button></td>
+                <td><button id='1' class="com compose1">Bizet</button></td>
+                <td><button id='2' class="com compose2">Boccherini</button></td>
+                <td><button id='4' class="com compose4">Borodin</button></td>
+                <td><button id='2' class="com compose2">Brahms</button></td>
+                <td><button id='3' class="com compose3">Britten</button></td>
+                <td><button id='1' class="com compose1">Bruch</button></td>
+                </tr>
+                <tr>
+                
+                <td><button id='6' class=" com compose6">Bruckner</button></td>
+                <td><button id='4' class=" com compose4">Chopin</button></td>
+                <td><button id='2' class=" com compose2">Copeland</button></td>
+                <td><button id='3' class=" com compose3">Corelli</button></td>
+                <td><button id='1' class=" com compose1">Debussy</button></td>
+                <td><button id='5' class=" com compose5">Dvořák</button></td>  
+                <td><button id='2' class="com compose2">Elgar</button></td>
+                <td><button id ='5'class="com compose5">Fauré</button></td>
+                <td><button id='4' class="com compose4">Frank</button></td>
+                <td><button id='3' class="com compose3">Gershwin</button></td>
+                <td><button id='5'class="com compose5">Glinka</button></td>
+                <td><button id='2' class="com compose2">Grieg</button></td>             
+                </tr>
+                <tr>
+                    
+                    <td><button id='6' class="com compose6">Handel</button></td>
+                    <td><button id='3' class="com compose3">Haydn</button></td>
+                    <td><button id='2' class="com compose2">Holst</button></td>
+                    <td><button id='2' class="com compose2">Kreisler</button></td>
+                    <td><button id='5' class="com compose5">Liszt</button></td>
+                    <td><button id='4' class="com compose4">Mahler</button></td>
+                    <td><button id='3' class="com compose3">Mendelssohn</button></td>
+                    <td><button id='5' class="com compose5">Monteverdi</button></td>
+                    <td><button id='2' class="com compose2">Mozart</button></td>
+                    <td><button id='6' class="com compose6">Mussorgsky</button></td>
+                    <td><button id='3' class="com compose3">Offenbach</button></td>
+                    <td><button id='2' class="com compose2">Pachelbel</button></td>
+                </tr>
+                <tr>
+                    <td><button id='2' class="com compose2">Paganini</button></td>
+                    <td><button id='5' class="com compose5">Prokofiev</button></td>
+                    <td><button id='4' class="com compose4">Puccini</button></td>
+                    <td><button id='3' class="com compose3">Purcell</button></td>
+                    <td><button id='5' class="com compose5">Rachmaninoff</button></td>
+                    <td><button id='2' class="com compose2">Ravel</button></td>
+                    <td><button id='6' class="com compose6">Rimsky-Korasakov</button></td>
+                    <td><button id='3' class="com compose3">Rossini</button></td>
+                    <td><button id='2' class="com compose2">Saint-Saëns</button></td>
+                    <td><button id='2' class="com compose2">Sarasate</button></td>
+                    <td><button id='5' class="com compose5">Satie</button></td>
+                    <td><button id='4' class="com compose4">Schoenberg</button></td>
+                </tr>
+                <tr>
+                    
+                    <td><button id='3' class="com compose3">Schubert</button></td>
+                    <td><button id='5' class="com compose3">C.Schumann</button></td>
+                    <td><button id='4' class="com compose3">R.Schumann</button></td>
+                    <td><button id='5' class="com compose5">Scriabin</button></td>
+                    <td><button id='2' class="com compose2">Shostakovich</button></td>
+                    <td><button id='6' class="com compose6">Sibelius</button></td>
+                    <td><button id='3' class="com compose3">Smetana</button></td>
+                    <td><button id='2' class="com compose2">Strauss</button></td>
+                    <td><button id='6' class="com compose6">Stravinsky</button></td>
+                    <td><button id='3' class="com compose3">Tartini</button></td>
+                    <td><button id='2' class="com compose2">Tchaikovsky</button></td>
+                    <td><button id='2' class="com compose2">Telemann</button></td>
+                    
+                </tr>
+                <tr>
+                    <td><button id='5' class="com compose5">Verdi</button></td>
+                    <td><button id='4' class="com compose4">Vivaldi</button></td>
+                    <td><button id='5' class="com compose5">Wagner</button></td>
+                    <td><button id='4' class="com compose4">Weber</button></td>
+                    <td><button id='5' class="com compose5">Wieniawski</button></td>
+                    <td><button id='4' class="com compose4">Williams</button></td>
+                </tr>
+                
+            </table>
+            <p>
+                Primary instrument/Orchestral Makeup:
+            </p>
+            <table id="instruments">
+                <tr>
+                        <td><button id='1' class="in instru1">Bassoon</button></td>
+                        <td><button id='3' class="in instru3">Cello</button></td>
+                        <td><button id='4' class="in instru4">Clarinet</button></td>
+                        <td><button id='6' class="in instru6">Double Bass</button></td>
+                        <td><button id='5' class="in instru5">Flute</button></td>
+                        <td><button id='2' class="in instru2">Guitar</button></td>
+                        <td><button id='3' class="in instru3">Harp</button></td>
+                        <td><button id='2' class="in instru2">Horn</button></td>
+                        <td><button id='1' class="in instru1">Oboe</button></td>
+                        <td><button id='5' class="in instru5">Piano</button></td>
+                        <td><button id='6' class="in instru6">Strings</button></td>
+                        <td><button id='4' class="in instru4">Symphony</button></td>
+                        <td><button id='2' class="in instru2">Timpani</button></td>
+                        <td><button id='3' class="in instru3">Trombone</button></td>
+                        <td><button id='3' class="in instru3">Trumpet</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id='1' class="in instru1">Viola</button></td> 
+                        <td><button id='2' class="in instru2">Violin</button></td> 
+                    </tr>
+            
+                </table>
+                <p>
+                    Music Form:
+                </p>
+                <table id="titles">
+                        <tr>
+                            <td><button id='2' class="ti title2">Ballade</button></td>
+                            <td><button id='1' class="ti title1">Barcarolles</button></td>
+                            <td><button id='6' class="ti title6">Concerto</button></td>
+                            <td><button id='5' class="ti title5">Etude</button></td>
+                            <td><button id='4' class="ti title4">Fantasia</button></td>
+                            <td><button id='2' class="ti title2">Impromptu</button></td>
+                            <td><button id='1' class="ti title1">Lieder</button></td>
+                            <td><button id='2' class="ti title2">Mazukra</button></td>
+                            <td><button id='4' class="ti title4">Nocturne</button></td>
+                            <td><button id='3' class="ti title3">Octet</button></td>
+                            <td><button id='6' class="ti title6">Overture</button></td>
+                            <td><button id='3' class="ti title3">Polonaise</button></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><button id='1' class="ti title1">Prelude</button></td>
+                            <td><button id='2' class="ti title2">Quartet</button></td>
+                            <td><button id='3' class="ti title3">Quintet</button></td>
+                            <td><button id='6' class="ti title6">Rondos</button></td>
+                            <td><button id='5' class="ti title5">Scherzo</button></td>
+                            <td><button id='4' class="ti title4">Septet</button></td>
+                            <td><button id='2' class="ti title2">Serenade</button></td>
+                            <td><button id='1' class="ti title1">Sextet</button></td>
+                            <td><button id='3' class="ti title3">Sonata</button></td>
+                            <td><button id='1' class="ti title1">Sextet</button></td>
+                            <td><button id='1' class="ti title1">Suite</button></td>
+
+                            
+                        </tr>
+                        <tr>
+                            <td><button id='6' class="ti title6">Symphony</button></td>
+                            <td><button id='1' class="ti title1">Transcriptions</button></td>
+                            <td><button id='3' class="ti title3">Trio</button></td>
+                            <td><button id='2' class="ti title2">Variations</button></td>
+                            <td><button id='2' class="ti title2">Waltz</button></td>
+                            <td><button id='5' class="ti title5">NA</button></td>
+                        </tr>
+                    </table>
+                    <p>
+                        No:
+                    </p>
+                    <table class="numbers" id="numbers">
+                        <tr height="10px | %">
+                            <td><button id='2' class="no num2">1</button></td>
+                            <td><button id='1' class="no num1">2</button></td>
+                            <td><button id='6' class="no num6">3</button></td>
+                            <td><button id='5' class="no num5">4</button></td>
+                            <td><button id='4' class="no num4">5</button></td>
+                            <td><button id='2' class="no num2">6</button></td>
+                            <td><button id='1' class="no num1">7</button></td>
+                            <td><button id='2' class="no num2">8</button></td>
+                            <td><button id='4' class="no num4">9</button></td>
+                            <td><button id='3' class="no num3">10</button></td>
+                            <td><button id='6' class="no num6">11</button></td>
+                            <td><button id='3' class="no num3">12</button></td>
+                            <td><button id='2' class="no num2">13</button></td>
+                            <td><button id='1' class="no num3">14</button></td>
+                            <td><button id='6' class="no num6">15</button></td>
+                            <td><button id='5' class="no num5">16</button></td>
+                            <td><button id='4' class="no num4">17</button></td>
+                            <td><button id='2' class="no num2">18</button></td>
+                            <td><button id='2' class="no num2">19</button></td>
+                            <td><button id='1' class="no num3">20</button></td>
+                            <td><button id='6' class="no num6">21</button></td>
+                            <td><button id='5' class="no num5">22</button></td>
+                            <td><button id='4' class="no num4">23</button></td>
+                            <td><button id='2' class="no num2">24</button></td>
+                            <td><button id='3' class="no num3">25</button></td>
+                            <td><button id='2' class="no num2">26</button></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><button id='3' class="no num3">27</button></td>
+                            <td><button id='6' class="no num6">28</button></td>
+                            <td><button id='5' class="no num5">29</button></td>
+                            <td><button id='4' class="no num4">30</button></td>
+                            <td><button id='2' class="no num2">31</button></td>
+                            <td><button id='2' class="no num2">32</button></td>
+                            <td><button id='1' class="no num1">33</button></td>
+                            <td><button id='6' class="no num6">34</button></td>
+                            <td><button id='5' class="no num5">35</button></td>
+                            <td><button id='4' class="no num4">36</button></td>
+                            <td><button id='2' class="no num2">37</button></td>
+                            <td><button id='3' class="no num3">38</button></td>
+                            <td><button id='6' class="no num6">39</button></td>
+                            <td><button id='5' class="no num5">40</button></td>
+                            <td><button id='4' class="no num4">41</button></td>
+                            <td><button id='2' class="no num2">42</button></td>
+                            <td><button id='2' class="no num2">43</button></td>
+                            <td><button id='1' class="no num3">44</button></td>
+                            <td><button id='6' class="no num6">45</button></td>
+                            <td><button id='5' class="no num5">46</button></td>
+                            <td><button id='4' class="no num4">47</button></td>
+                            <td><button id='2' class="no num2">48</button></td>
+                            <td><button id='1' class="no num3">49</button></td>
+                            <td><button id='6' class="no num6">50</button></td>
+                            <td><button id='5' class="no num5">51</button></td>
+                            <td><button id='4' class="no num4">52</button></td>
+                        </tr>
+                        <tr>
+                            <td><button id='3' class="no num3">53</button></td>
+                            <td><button id='2' class="no num2">54</button></td>
+                            <td><button id='5' class="no num5">55</button></td>
+                            <td><button id='3' class="no num3">56</button></td>
+                            <td><button id='2' class="no num2">57</button></td>
+                            <td><button id='4' class="no num4">58</button></td>
+                            <td><button id='5' class="no num5">59</button></td>
+                            <td><button id='6' class="no num6">60</button></td>
+                            <td><button id='5' class="no num5">61</button></td>
+                            <td><button id='4' class="no num4">62</button></td>
+                            <td><button id='2' class="no num2">63</button></td>
+                            <td><button id='2' class="no num2">64</button></td>
+                            <td><button id='6' class="no num6">65</button></td>
+                            <td><button id='5' class="no num5">66</button></td>
+                            <td><button id='3' class="no num3">67</button></td>
+                            <td><button id='2' class="no num2">68</button></td>
+                            <td><button id='2' class="no num2">69</button></td>
+                            <td><button id='3' class="no num3">70</button></td>
+                            <td><button id='6' class="no num6">71</button></td>
+                            <td><button id='1' class="no num1">72</button></td>
+                            <td><button id='4' class="no num4">73</button></td>
+                            <td><button id='2' class="no num2">74</button></td>
+                            <td><button id='3' class="no num3">75</button></td>
+                            <td><button id='1' class="no num1">76</button></td>
+                            <td><button id='5' class="no num5">77</button></td>
+                            <td><button id='1' class="no num1">78</button></td>
+                        </tr>
+                        <tr>
+                            <td><button id='3' class="no num3">79</button></td>
+                            <td><button id='3' class="no num3">80</button></td>
+                            <td><button id='5' class="no num5">81</button></td>
+                            <td><button id='4' class="no num4">82</button></td>
+                            <td><button id='2' class="no num2">83</button></td>
+                            <td><button id='2' class="no num2">84</button></td>
+                            <td><button id='1' class="no num1">85</button></td>
+                            <td><button id='6' class="no num6">86</button></td>
+                            <td><button id='2' class="no num2">87</button></td>
+                            <td><button id='4' class="no num4">88</button></td>
+                            <td><button id='2' class="no num2">89</button></td>
+                            <td><button id='5' class="no num5">90</button></td>
+                            <td><button id='6' class="no num6">91</button></td>
+                            <td><button id='5' class="no num5">92</button></td>
+                            <td><button id='3' class="no num3">93</button></td>
+                            <td><button id='2' class="no num2">94</button></td>
+                            <td><button id='4' class="no num4">95</button></td>
+                            <td><button id='3' class="no num3">96</button></td>
+                            <td><button id='3' class="no num3">97</button></td>
+                            <td><button id='5' class="no num5">98</button></td>
+                            <td><button id='4' class="no num4">99</button></td>
+                            <td><button id='1' class="no num1">100</button></td>
+                            <td><button id='2' class="no num2">NA</button></td>
+                        </tr>
+                    </table>
+                    <p>
+                        Key:
+                    </p>
+                    <table class="keys" id="keys">
+                        <tr>
+                                <td><button id='1' class="ke keys1">A</button></td>
+                                <td><button id='3' class="ke keys3">A-flat</button></td>
+                                <td><button id='4' class="ke keys4">A-m</button></td>
+                                <td><button id='6' class="ke keys6">B</button></td>
+                                <td><button id='5' class="ke keys5">B-flat</button></td>
+                                <td><button id='2' class="ke keys2">B-flat-m</button></td>
+                                <td><button id='3' class="ke keys3">C</button></td>
+                                <td><button id='2' class="ke keys2">C-sharp-m</button></td>
+                                <td><button id='1' class="ke keys1">C-m</button></td>
+                                <td><button id='5' class="ke keys5">D</button></td>
+                                <td><button id='6' class="ke keys6">D-flat</button></td>
+                                <td><button id='4' class="ke keys4">D-m</button></td>
+                                <td><button id='2' class="ke keys2">E</button></td>
+                                <td><button id='3' class="ke keys3">E-flat</button></td>
+                                <td><button id='3' class="ke keys3">E-flat-m</button></td>
+                                <td><button id='1' class="ke keys1">E-m</button></td> 
+                                <td><button id='2' class="ke keys2">F</button></td> 
+                                <td><button id='3' class="ke keys3">F-sharp-m</button></td>
+                                <td><button id='1' class="ke keys1">F-m</button></td> 
+                                <td><button id='2' class="ke keys2">G</button></td> 
+                                <td><button id='3' class="ke keys3">G-sharp-m</button></td>
+                                <td><button id='1' class="ke keys1">G-flat</button></td> 
+                                <td><button id='2' class="ke keys2">G-m</button></td> 
+                                <td><button id='5' class="ke keys5">NA</button></td>
+                        </tr>
+                    </table>
+                    <p>
+                        Opus/BMV/S:
+                    </p>
+                    <table class="opus" id="opus">
+                        <tr>
+                            <td><button id='2' class="op opus2">1</button></td>
+                            <td><button id='1' class="op opus1">2</button></td>
+                            <td><button id='6' class="op opus6">3</button></td>
+                            <td><button id='5' class="op opus5">4</button></td>
+                            <td><button id='4' class="op opus4">5</button></td>
+                            <td><button id='2' class="op opus2">6</button></td>
+                            <td><button id='1' class="op opus1">7</button></td>
+                            <td><button id='2' class="op opus2">8</button></td>
+                            <td><button id='4' class="op opus4">9</button></td>
+                            <td><button id='3' class="op opus3">10</button></td>
+                            <td><button id='6' class="op opus6">11</button></td>
+                            <td><button id='3' class="op opus3">12</button></td>
+                            <td><button id='2' class="op opus2">13</button></td>
+                            <td><button id='3' class="op opus3">14</button></td>
+                            <td><button id='6' class="op opus6">15</button></td>
+                            <td><button id='5' class="op opus5">16</button></td>
+                            <td><button id='4' class="op opus4">17</button></td>
+                            <td><button id='2' class="op opus2">18</button></td>
+                            <td><button id='2' class="op opus2">19</button></td>
+                            <td><button id='1' class="op opus3">20</button></td>
+                            <td><button id='6' class="op opus6">21</button></td>
+                            <td><button id='5' class="op opus5">22</button></td>
+                            <td><button id='4' class="op opus4">23</button></td>
+                            <td><button id='2' class="op opus2">24</button></td>
+                            <td><button id='3' class="op opus3">25</button></td>
+                            <td><button id='2' class="op opus2">26</button></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><button id='3' class="op opus3">27</button></td>
+                            <td><button id='6' class="op opus6">28</button></td>
+                            <td><button id='5' class="op opus5">29</button></td>
+                            <td><button id='4' class="op opus4">30</button></td>
+                            <td><button id='2' class="op opus2">31</button></td>
+                            <td><button id='2' class="op opus2">32</button></td>
+                            <td><button id='1' class="op opus1">33</button></td>
+                            <td><button id='6' class="op opus6">34</button></td>
+                            <td><button id='5' class="op opus5">35</button></td>
+                            <td><button id='4' class="op opus4">36</button></td>
+                            <td><button id='2' class="op opus2">37</button></td>
+                            <td><button id='3' class="op opus3">38</button></td>
+                            <td><button id='6' class="op opus6">39</button></td>
+                            <td><button id='5' class="op opus5">40</button></td>
+                            <td><button id='4' class="op opus4">41</button></td>
+                            <td><button id='2' class="op opus2">42</button></td>
+                            <td><button id='2' class="op opus2">43</button></td>
+                            <td><button id='1' class="op opus3">44</button></td>
+                            <td><button id='6' class="op opus6">45</button></td>
+                            <td><button id='5' class="op opus5">46</button></td>
+                            <td><button id='4' class="op opus4">47</button></td>
+                            <td><button id='2' class="op opus2">48</button></td>
+                            <td><button id='1' class="op opus3">49</button></td>
+                            <td><button id='6' class="op opus6">50</button></td>
+                            <td><button id='5' class="op opus5">51</button></td>
+                            <td><button id='4' class="op opus4">52</button></td>
+                        </tr>
+                        <tr>
+                            <td><button id='3' class="op opus3">53</button></td>
+                            <td><button id='2' class="op opus2">54</button></td>
+                            <td><button id='5' class="op opus5">55</button></td>
+                            <td><button id='3' class="op opus3">56</button></td>
+                            <td><button id='2' class="op opus2">57</button></td>
+                            <td><button id='4' class="op opus4">58</button></td>
+                            <td><button id='5' class="op opus5">59</button></td>
+                            <td><button id='6' class="op opus6">60</button></td>
+                            <td><button id='5' class="op opus5">61</button></td>
+                            <td><button id='4' class="op opus4">62</button></td>
+                            <td><button id='2' class="op opus2">63</button></td>
+                            <td><button id='2' class="op opus2">64</button></td>
+                            <td><button id='6' class="op opus6">65</button></td>
+                            <td><button id='5' class="op opus5">66</button></td>
+                            <td><button id='3' class="op opus3">67</button></td>
+                            <td><button id='2' class="op opus2">68</button></td>
+                            <td><button id='2' class="op opus2">69</button></td>
+                            <td><button id='3' class="op opus3">70</button></td>
+                            <td><button id='6' class="op opus6">71</button></td>
+                            <td><button id='1' class="op opus1">72</button></td>
+                            <td><button id='4' class="op opus4">73</button></td>
+                            <td><button id='2' class="op opus2">74</button></td>
+                            <td><button id='3' class="op opus3">75</button></td>
+                            <td><button id='1' class="op opus1">76</button></td>
+                            <td><button id='5' class="op opus5">77</button></td>
+                            <td><button id='1' class="op opus1">78</button></td>
+                        </tr>
+                        <tr>
+                            <td><button id='3' class="op opus3">79</button></td>
+                            <td><button id='3' class="op opus3">80</button></td>
+                            <td><button id='5' class="op opus5">81</button></td>
+                            <td><button id='4' class="op opus4">82</button></td>
+                            <td><button id='2' class="op opus2">83</button></td>
+                            <td><button id='2' class="op opus2">84</button></td>
+                            <td><button id='1' class="op opus1">85</button></td>
+                            <td><button id='6' class="op opus6">86</button></td>
+                            <td><button id='2' class="op opus2">87</button></td>
+                            <td><button id='4' class="op opus4">88</button></td>
+                            <td><button id='2' class="op opus2">89</button></td>
+                            <td><button id='5' class="op opus5">90</button></td>
+                            <td><button id='6' class="op opus6">91</button></td>
+                            <td><button id='5' class="op opus5">92</button></td>
+                            <td><button id='3' class="op opus3">93</button></td>
+                            <td><button id='2' class="op opus2">94</button></td>
+                            <td><button id='4' class="op opus4">95</button></td>
+                            <td><button id='3' class="op opus3">96</button></td>
+                            <td><button id='3' class="op opus3">97</button></td>
+                            <td><button id='5' class="op opus5">98</button></td>
+                            <td><button id='4' class="op opus4">99</button></td>
+                            <td><button id='1' class="op opus1">100</button></td>
+                            <td><button id='6' class="op opus6">NA</button></td>
+                        </tr>
+                    </table>
+            </div>
+        </div>
+    </div>
+</div>   
+</body>
+
+        
+<script src="java.js"></script>
+<script>
+    if (new URLSearchParams(window.location.search).get('callFunction') === 'nextQuestion()') {
+        nextQuestion();
+    }
+</script>
+    <script>
+    
+// composer portion       
+var btnCompose = document.getElementById("composers");
+var btnsComp = btnCompose.getElementsByClassName("com");
+var pickComposer;
+var pickInstrument;
+var pickTitle;
+var pickNo;
+var pickKey;
+var pickOp;
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btnsComp.length; i++) {
+  btnsComp[i].addEventListener("click", function() {
+    var current = Array.from(btnCompose.getElementsByClassName("active1"));
+    current = current.concat((Array.from(btnCompose.getElementsByClassName("active2"))));
+    current = current.concat((Array.from(btnCompose.getElementsByClassName("active3"))));
+    current = current.concat((Array.from(btnCompose.getElementsByClassName("active4"))));
+    current = current.concat((Array.from(btnCompose.getElementsByClassName("active5"))));
+    current = current.concat((Array.from(btnCompose.getElementsByClassName("active6"))));
+
+    // If there's no active class
+    if (current.length > 0) {
+      s = current[0].id;
+      str = " active" + s;
+      current[0].className = current[0].className.replace(str, "");
+      console.log(current)
+    }
+    // Add the active class to the current/clicked button
+    s = this.id
+    str = " active" + s;
+    this.className += str;
+  });
+  
+}
+btnCompose.onclick = e => {
+    pickComposer = e.target.innerText;
+}
+
+var btnInstr = document.getElementById("instruments");
+var btnsI = btnInstr.getElementsByClassName("in");
+console.log(btnsI);
+
+// instrument portion       
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btnsI.length; i++) {
+  btnsI[i].addEventListener("click", function() {
+    var currentI = Array.from(btnInstr.getElementsByClassName("active1"));
+    currentI = currentI.concat((Array.from(btnInstr.getElementsByClassName("active2"))));
+    currentI = currentI.concat((Array.from(btnInstr.getElementsByClassName("active3"))));
+    currentI = currentI.concat((Array.from(btnInstr.getElementsByClassName("active4"))));
+    currentI = currentI.concat((Array.from(btnInstr.getElementsByClassName("active5"))));
+    currentI = currentI.concat((Array.from(btnInstr.getElementsByClassName("active6"))));
+
+    // If there's no active class
+    if (currentI.length > 0) {
+      s = currentI[0].id;
+      str = " active" + s;
+      currentI[0].className = currentI[0].className.replace(str, "");
+    }
+    // Add the active class to the current/clicked button
+    s = this.id
+    str = " active" + s;
+    this.className += str;
+  }); 
+} 
+btnInstr.onclick = e => {
+    pickInstrument = e.target.innerText;
+}
+
+// title portion       
+// Loop through the buttons and add the active class to the current/clicked button
+
+var btnTitle = document.getElementById("titles");
+var btnsT = btnTitle.getElementsByClassName("ti");
+
+for (var i = 0; i < btnsT.length; i++) {
+  btnsT[i].addEventListener("click", function() {
+    var currentT = Array.from(btnTitle.getElementsByClassName("active1"));
+    currentT = currentT.concat((Array.from(btnTitle.getElementsByClassName("active2"))));
+    currentT = currentT.concat((Array.from(btnTitle.getElementsByClassName("active3"))));
+    currentT = currentT.concat((Array.from(btnTitle.getElementsByClassName("active4"))));
+    currentT = currentT.concat((Array.from(btnTitle.getElementsByClassName("active5"))));
+    currentT = currentT.concat((Array.from(btnTitle.getElementsByClassName("active6"))));
+
+    // If there's no active class
+    if (currentT.length > 0) {
+      s = currentT[0].id;
+      str = " active" + s;
+      currentT[0].className = currentT[0].className.replace(str, "");
+    }
+    // Add the active class to the current/clicked button
+    st = this.id
+    str = " active" + st;
+    this.className += str;
+  }); 
+} 
+btnTitle.onclick = e => {
+    pickTitle = e.target.innerText;
+}
+
+// No portion       
+// Loop through the buttons and add the active class to the current/clicked button
+
+var btnNumber = document.getElementById("numbers");
+var btnsNo = btnNumber.getElementsByClassName("no");
+
+for (var i = 0; i < btnsNo.length; i++) {
+  btnsNo[i].addEventListener("click", function() {
+    var currentN = Array.from(btnNumber.getElementsByClassName("active1"));
+    currentN = currentN.concat((Array.from(btnNumber.getElementsByClassName("active2"))));
+    currentN = currentN.concat((Array.from(btnNumber.getElementsByClassName("active3"))));
+    currentN = currentN.concat((Array.from(btnNumber.getElementsByClassName("active4"))));
+    currentN = currentN.concat((Array.from(btnNumber.getElementsByClassName("active5"))));
+    currentN = currentN.concat((Array.from(btnNumber.getElementsByClassName("active6"))));
+
+    // If there's no active class
+    if (currentN.length > 0) {
+      sN = currentN[0].id;
+      strN = " active" + sN;
+      currentN[0].className = currentN[0].className.replace(strN, "");
+    }
+    // Add the active class to the current/clicked button
+    stN = this.id
+    strN = " active" + stN;
+    this.className += strN;
+  }); 
+} 
+btnNumber.onclick = e => {
+    pickNo = e.target.innerText;
+}
+
+// Key portion       
+// Loop through the buttons and add the active class to the current/clicked button
+
+var btnKeys = document.getElementById("keys");
+var btnsK = btnKeys.getElementsByClassName("ke");
+
+for (var i = 0; i < btnsK.length; i++) {
+  btnsK[i].addEventListener("click", function() {
+    var currentK = Array.from(btnKeys.getElementsByClassName("active1"));
+    currentK = currentK.concat((Array.from(btnKeys.getElementsByClassName("active2"))));
+    currentK = currentK.concat((Array.from(btnKeys.getElementsByClassName("active3"))));
+    currentK = currentK.concat((Array.from(btnKeys.getElementsByClassName("active4"))));
+    currentK = currentK.concat((Array.from(btnKeys.getElementsByClassName("active5"))));
+    currentK = currentK.concat((Array.from(btnKeys.getElementsByClassName("active6"))));
+
+    // If there's no active class
+    if (currentK.length > 0) {
+      sK = currentK[0].id;
+      strK = " active" + sK;
+      currentK[0].className = currentK[0].className.replace(strK, "");
+    }
+    // Add the active class to the current/clicked button
+    stK = this.id
+    strK = " active" + stK;
+    this.className += strK;
+  }); 
+} 
+btnKeys.onclick = e => {
+    pickKey = e.target.innerText;
+}
+
+// Key portion       
+// Loop through the buttons and add the active class to the current/clicked button
+
+var btnOpus = document.getElementById("opus");
+var btnsOp = btnOpus.getElementsByClassName("op");
+
+for (var i = 0; i < btnsOp.length; i++) {
+  btnsOp[i].addEventListener("click", function() {
+    var currentO = Array.from(btnOpus.getElementsByClassName("active1"));
+    currentO = currentO.concat((Array.from(btnOpus.getElementsByClassName("active2"))));
+    currentO = currentO.concat((Array.from(btnOpus.getElementsByClassName("active3"))));
+    currentO = currentO.concat((Array.from(btnOpus.getElementsByClassName("active4"))));
+    currentO = currentO.concat((Array.from(btnOpus.getElementsByClassName("active5"))));
+    currentO = currentO.concat((Array.from(btnOpus.getElementsByClassName("active6"))));
+
+    // If there's no active class
+    if (currentO.length > 0) {
+      sO = currentO[0].id;
+      strO = " active" + sO;
+      currentO[0].className = currentO[0].className.replace(strO, "");
+    }
+    // Add the active class to the current/clicked button
+    stO = this.id
+    strO = " active" + stO;
+    this.className += strO;
+  }); 
+} 
+btnOpus.onclick = e => {
+    pickOpus = e.target.innerText;
+}
+
+        </script>
+</body>
+</html>

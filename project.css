@@ -1,0 +1,55 @@
+.quizgame {
+    margin-left:250px;
+    margin-right:250px;
+}
+
+li {
+    font-size:20px;
+}
+
+.obj {
+    font-style:italic;
+    font-size:30px;
+}
+.e {
+    font-size:20px;
+}
+
+.f {
+    font-size:20px;
+}
+
+.ga {
+    text-align:center;
+    font-size:50px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.ga:hover {
+    color:blue;
+}
+
+.dice {
+    margin-left:250px;
+    margin-right:250px;
+}
+
+.color {
+    margin: auto;
+    width: 50%;
+    
+}
+
+
+li {
+    margin:10px 0;
+}
+
+.lapse {
+    font-size:25px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.dice p {
+    font-size:20px;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}

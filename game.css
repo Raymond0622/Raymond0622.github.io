@@ -1,0 +1,402 @@
+.titleSlide {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.res {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:30px;
+    margin-top:50px;
+
+}
+.com {
+    font-size:12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.compose1, .num1, .keys1, .opus1{
+    background-color:white;
+    border:3px solid green;
+    color:black;
+    transition-duration:0.4s;
+    cursor:pointer;
+    width:100px;
+    height:100%;
+}
+.compose2, .num2, .keys2, .opus2 {
+    background-color:white;
+    border:3px solid orangered;
+    color:black;
+    transition-duration:0.4s;
+    cursor:pointer;
+    width:100px;
+    height:100%;
+}
+.compose3, .num3, .keys3, .opus3 {
+    background-color:white;
+    border:3px solid lightseagreen;
+    color:black;
+    transition-duration:0.4s;
+    cursor:pointer;
+    width:100px;
+    height:100%;
+}
+.compose4, .num4, .keys4, .opus4 {
+    background-color:white;
+    border:3px solid palevioletred;
+    color:black;
+    transition-duration:0.4s;
+    cursor:pointer;
+    width:100px;
+    height:100%;
+}
+.compose5, .num5, .keys5, .opus5 {
+    background-color:white;
+    border:3px solid cornflowerblue;
+    color:black;
+    transition-duration:0.4s;
+    cursor:pointer;
+    width:100px;
+    height:100%;
+}
+.compose6, .num6, .keys6 , .opus6{
+    background-color:white;
+    border:3px solid purple;
+    color:black;
+    transition-duration:0.4s;
+    cursor:pointer;
+    width:100px;
+    height:100%;
+}
+
+.instru1 {
+    background-color:white;
+    border:3px solid green;
+    color:black;
+    transition-duration:0.4s;
+    cursor:pointer;
+    width:100%;
+    height:100%;
+}
+.instru2 {
+    background-color:white;
+    border:3px solid orangered;
+    color:black;
+    transition-duration:0.4s;
+    cursor:pointer;
+    width:100%;
+    height:100%;
+}
+.instru3 {
+    background-color:white;
+    border:3px solid lightseagreen;
+    color:black;
+    transition-duration:0.4s;
+    cursor:pointer;
+    width:100%;
+    height:100%;
+}
+.instru4 {
+    background-color:white;
+    border:3px solid palevioletred;
+    color:black;
+    transition-duration:0.4s;
+    cursor:pointer;
+    width:100%;
+    height:100%;
+}
+.instru5 {
+    background-color:white;
+    border:3px solid cornflowerblue;
+    color:black;
+    transition-duration:0.4s;
+    cursor:pointer;
+    width:100%;
+    height:100%;
+}
+.instru6 {
+    background-color:white;
+    border:3px solid purple;
+    color:black;
+    transition-duration:0.4s;
+    cursor:pointer;
+    width:100%;
+    height:100%;
+}
+.title1 {
+    background-color:white;
+    border:3px solid green;
+    color:black;
+    transition-duration:0.4s;
+    cursor:pointer;
+    width:100%;
+    height:100%;
+}
+.title2 {
+    background-color:white;
+    border:3px solid orangered;
+    color:black;
+    transition-duration:0.4s;
+    cursor:pointer;
+    width:100%;
+    height:100%;
+}
+.title3 {
+    background-color:white;
+    border:3px solid lightseagreen;
+    color:black;
+    transition-duration:0.4s;
+    cursor:pointer;
+    width:100%;
+    height:100%;
+}
+.title4 {
+    background-color:white;
+    border:3px solid palevioletred;
+    color:black;
+    transition-duration:0.4s;
+    cursor:pointer;
+    width:100%;
+    height:100%;
+}
+.title5 {
+    background-color:white;
+    border:3px solid cornflowerblue;
+    color:black;
+    transition-duration:0.4s;
+    cursor:pointer;
+    width:100%;
+    height:100%;
+}
+.title6 {
+    background-color:white;
+    border:3px solid purple;
+    color:black;
+    transition-duration:0.4s;
+    cursor:pointer;
+    width:100%;
+    height:100%;
+}
+
+table.com tr, td {
+    border:0px solid;
+    width:75x;
+    height:50px;
+ }
+ 
+.ti {
+    width:100px;
+}
+.in {
+    width:80px;
+}
+
+.active1, .compose1:hover, .instru1:hover, .title1:hover, .num1:hover, .keys1:hover, .opus1:hover{
+    background-color:green;
+    color:white;
+}
+.active2, .compose2:hover, .instru2:hover, .title2:hover, .num2:hover, .keys2:hover, .opus2:hover{
+    background-color:orangered;
+    color:white;
+}
+.active3, .compose3:hover, .instru3:hover, .title3:hover, .num3:hover, .keys3:hover, .opus3:hover {
+    background-color:lightseagreen;
+    color:white;
+}
+.active4, .compose4:hover, .instru4:hover, .title4:hover, .num4:hover, .keys4:hover, .opus4:hover {
+    background-color:palevioletred;
+    color:white;
+}
+.active5, .compose5:hover, .instru5:hover, .title5:hover, .num5:hover, .keys5:hover, .opus5:hover {
+    background-color:cornflowerblue;
+    color:white;
+}
+.active6, .compose6:hover, .instru6:hover, .title6:hover, .num6:hover, .keys6:hover, .opus6:hover {
+    background-color:purple;
+    color:white;
+}
+
+table {
+    border-collapse:collapse;
+ }
+ 
+
+ tr {
+    text-align:center;
+    margin:0;
+    padding:0;
+ }
+ 
+ td {
+    padding:1px;
+ }
+
+table.res tr td {
+    border: 2px solid black;
+    padding:5px;
+    width:80px;
+    font-size:15px;
+    font-family:Georgia, 'Times New Roman', Times, serif
+    
+}
+.responses {
+    position:relative;
+}
+.final {
+    position:absolute;
+    left:5%;
+    font-size:25px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:bold;
+
+}
+.fpoints {
+    font-size:large;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight:bold;
+}
+.store {
+    position:absolute;
+    left:75%;
+    font-size:25px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:bold;
+}
+.points {
+    color:darkorchid;
+    text-decoration: underline;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:25px;
+}
+
+#nameAns {
+    transition: background-color 1s;
+    
+}
+
+#instruAns {
+    transition: background-color 1s;
+}
+
+#formAns {
+    transition: background-color 1s;
+}
+
+#NoAns {
+    transition: background-color 1s;
+}
+#Key {
+    transition: background-color 1s;
+}
+#Ops {
+    transition: background-color 1s;
+}
+
+.show {
+    margin-left:200px;
+    font-weight:bold;
+}
+
+.buttons {
+    display:flex;
+    justify-content:center;
+}
+.buttong {
+    
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition-duration:0.4s;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    
+}
+
+.b1:hover{
+  background-color: green;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.b2:hover{
+    background-color: chocolate;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.b3:hover{
+    background-color:black;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.b4:hover{
+    background-color: cornflowerblue;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.b1 {
+    background-color: green;
+}
+.b2 {
+    background-color:chocolate
+}
+.b3 {
+    background-color:black
+}
+.b4 {
+    background-color:cornflowerblue
+}
+
+table.res tr td {
+    border: 2px solid black;
+    padding:5px;
+    width:80px;
+    font-size:15px;
+    font-family:Georgia, 'Times New Roman', Times, serif
+    
+}
+.numbers {
+    margin-bottom:0px;
+}
+.no {
+    width:100%;
+    height:100%
+}
+table.numbers tr td {
+    width:45px;
+    height:40px;
+}
+.ke {
+    width:100%;
+    height:100%;
+    width:50px;
+}
+
+table.keys tr, td {
+    width:100px;
+    height:50px;
+}
+
+.op {
+    width:100%;
+    height:100%
+}
+
+table.opus tr, td {
+    width: 45px;
+    height:40px;
+}
+
+.fpoints, .fques {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:large;
+    
+}
