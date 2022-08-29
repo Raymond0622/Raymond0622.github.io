@@ -1,0 +1,71 @@
+html {
+    margin:0;
+    padding:0;
+    background: url("/images/backmusic.jpeg");
+    background-size:cover;
+    background-color: rgba(255,255,255,0.8);
+    background-blend-mode: lighten;
+    height:auto;
+    
+}
+.intro {
+    margin-left:200px;
+    margin-right:200px;
+}
+div.intro p {
+    margin: 20px 10px 10px 10px;
+    font-weight: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:20px;
+
+}
+img.pfp {
+    float:left;
+    border: 8px solid;
+    border-radius: 4px;
+    padding: 0px;
+    width: 200px;
+    margin: 1px 10px 2px 10px;
+
+}
+img.pfp2 {
+    float:right;
+    border: 8px solid;
+    border-radius: 4px;
+    padding: 0px;
+    width: 200px;
+    margin: 10px 10px 2px 10px;
+}
+
+.topnav {
+    margin: 10px 40px 0px 45px;    
+    font-size:30px;
+    overflow:hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    
+    font-weight:bold;
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px;
+    text-decoration:black;
+    font-size: 25px;
+  }
+
+.topnav a:hover{
+    color:red
+}
+
+div.gallery p {
+    text-align:center;
+    font-weight:bold;
+    
+}
+hr {
+    height:5px;
+    background-color: gray;
+    border-bottom:solid 5 px gray;
+}
