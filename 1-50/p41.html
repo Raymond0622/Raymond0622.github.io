@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 41</title>
+    <link rel="stylesheet" href="problems.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 41: Pandigital prime
+        </h2>
+        <div class="white">
+            <p>
+                We shall say that an n-digit number is pandigital 
+                if it makes use of all the digits 1 to n exactly once. 
+                For example, 2143 is a 4-digit pandigital and is also prime.
+
+            </p>
+            <p>
+                What is the largest n-digit pandigital prime that exists?
+            </p>
+
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            There are two wys to go about this: Pick a n (number of digits), generate all possible pandigital
+            numbers, then check if its prime. This might take a bit of time. This is a runtime of approximately
+            \( O(n!)\) if I'm not mistaken. OR we can generate all the primes and find the largest Pandigital prime.
+            Producing the primes take a short amount of time. So, the latter approach was taken
+        </p>
+        <p class="algo">
+            But first, is there way to check what n to go up to? Well we know if a number has n digits, in order for it
+            to be prime, it must not contain any divisors. So, easy way to check is to find the sum of the digits, which is easy.
+            For example, 8-digit Pandigital has a sum of digit of 36, which is divisible by 3. So it can't ever be prime.
+            9-digit is the same as well. 7-digit on the otherhand, can have a Pandigital prime. Hence, we check up this digits!
+            We can also restrict our search (list of primes) up to 7654321 since this is the greatest Pandigital 7-digit number.
+                
+        </p>
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/be8371d9421604684469d21f599be7eb.js"></script>            
+        </div>
+            <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 7652413
+                        <br>Runtime: 7.7 seconds
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p40.html">&#60&#60 Problem 40</a>
+            <a class="second" href="p42.html">Problem 42 &#62&#62</a>
+
+        </div>
+    </div>
+</body> 

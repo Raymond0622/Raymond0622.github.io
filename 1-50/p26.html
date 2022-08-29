@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 26</title>
+    <link rel="stylesheet" href="problems.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 26: Reciprocal cycles</h2>
+        <div class="white">
+            <p>
+                A unit fraction contains 1 in the numerator. 
+                The decimal representation of the unit fractions with 
+                denominators 2 to 10 are given:            
+            </p>    
+            <p>
+           <pre> 
+                    1/2	= 	0.5
+                    1/3	= 	0.(3)
+                    1/4	= 	0.25
+                    1/5	= 	0.2
+                    1/6	= 	0.1(6)
+                    1/7	= 	0.(142857)
+                    1/8	= 	0.125
+                    1/9	= 	0.(1)
+                    1/10 =      0.1'
+            </pre>
+            </p>
+            <p>
+                
+            </p>
+            <p>         
+                Where 0.1(6) means 0.166666..., and has a 1-digit recurring 
+                cycle. It can be seen that 1/7 has a 6-digit recurring cycle.
+
+            </p>
+            <p>
+                Find the value of d < 1000 for which 1/d contains the 
+                longest recurring cycle in its decimal fraction part.
+            </p>
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            Interesting problem. Brute force is obvious. But, with a little big of math,
+            this problem is rather simple. In order to check if we have created
+            recurring cycle of a fraction, for example, how do we know to stop when
+            1/7 = 0.1428571? How do we know when we should stop at 7? Why not at 1? Sure,
+            1 does show up at the beginning, but it may lead to 142857123? 
+        </p>
+        <p class="algo">
+            Let k be the length of the recurring cycle, and let n be the denomiator, then,
+            $$ 10^k * \frac{1}{n} $$
+            This represents a rational number with integer portion of the number as the repeating part.
+            Then, if we subtract 1/n, we get the repeating portion!
+            $$ 10^k * \frac{1}{n} - \frac{1}{n} = g $$
+            For some g, where g is an integer. Let's multiply by n:
+            $$ 10^k - 1 = gn $$ 
+            Let's (mod n):
+            $$ 10^k - 1 \equiv0\pmod{n}$$
+            So, all we have to check is when is 10^k - 1 divisibl by n!
+        </p>
+        <p class="algo">
+            How about cycles that have non-repeating portion? For example, 0.166666?
+            We can take care of the non-repeats by getting rid of any factors of two's 
+            or five's in the number. So, we ahve two function dedicated to this: Two(), Five()
+        </p>
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/11bb87b77d93bc0e69044c519a1fb5c5.js"></script>
+            </div>
+                     <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 983
+                        <br>Runtime: 144 ms
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p25.html">&#60&#60 Problem 25</a>
+            <a class="second" href="p27.html">Problem 27 &#62&#62</a>
+
+        </div>
+    </div>
+</body> 

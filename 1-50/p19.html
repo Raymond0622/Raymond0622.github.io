@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 19</title>
+    <link rel="stylesheet" href="problems.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        table, th, td {
+            border: 3px solid black;
+            border-collapse:collapse
+        }
+        th, td {
+            padding: 10px;
+            text-align:center;
+        }
+    </style>
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 19: Counting sundays</h2>
+        <div class="white">
+            <p>
+                You are given the following information, 
+                but you may prefer to do some research for yourself.
+            </p>
+            <p>
+1 Jan 1900 was a Monday. <br>
+Thirty days has September, <br>
+April, June and November. <br>
+All the rest have thirty-one, <br>
+Saving February alone, <br>
+Which has twenty-eight, rain or shine. <br>
+And on leap years, twenty-nine. <br>
+A leap year occurs on any year evenly divisible by 4, but not on a century unless it is divisible by 400.
+            </p>
+            <p>
+                How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?
+            </p>
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            The key part of this solution is to use modular arthimetic.
+            There will be two different set of "pushes" depending on if the year
+            is a leap year or not. Every month, certain number of days are "pushed" from 
+            the prior month.
+        <p class="algo">
+            For example, if we start January 1st as a Monday, and January has 31 days, then 
+            we are pushing Monday on Feburary by 3 days since 31 is congruent to 3 (mod 7). Hence, it will be
+            Thursday on Feb 1st. So, we assign numbers to each days:
+            $$ Monday = 1 $$ $$ Tuesday = 2 $$ and so on. Sunday will be 0. Jan 1st of 1901 is a Wednesday, hence,
+            the initial value is 2. Then we add the number of pushes correspinding to each month, and check
+            if its 0 (mod 7) every month and keep track of how many 0 (mod 7) after each push.
+        </p>
+        <p class = "algo">
+            Also have to keep track of Leap days which is indicated with using two different push
+            arrays.
+        </p>
+        <p class="algo">
+            For example, lets do a sample calculation. The table below shows the number
+            of days and "pushes" for a given month. Let's say Jan 1st is a Tuesday, then we
+            indicate the initial day as 2. Then after January, Feb 1st will be 2 + 3 (mod 7), which is 
+            5. This corresponds to Saturday. We keep doing this until we have iterated from year 1901 to 2000 
+            Dec.
+            <center>
+            <table>
+                <tr>
+                    <td></td>
+                    <td>Jan</td>
+                    <td>Feb</td>
+                    <td>March</td>
+                    <td>April</td>
+                    <td>May</td>
+                    <td>June</td>
+                    <td>July</td>
+                    <td>Aug</td>
+                    <td>Sept</td>
+                    <td>Oct</td>
+                    <td>Nov</td>
+                    <td>Dec</td>
+                </tr>
+                <tr>
+                    <td># of Days</td>
+                    
+                    <td>31</td>
+                    <td>28</td>
+                    <td>31</td>
+                    <td>30</td>
+                    <td>31</td>
+                    <td>30</td>
+                    <td>31</td>
+                    <td>31</td>
+                    <td>30</td>
+                    <td>31</td>
+                    <td>30</td>
+                    <td>31</td>
+                </tr>
+                <tr>
+                <td>Pushes (mod 7)</td>
+                    
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+            </table>
+        </center>
+        </p>
+        </p>
+        
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/53d193d7b7a4547ee8a0150de3f8874a.js"></script>
+        </div>
+            <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 171
+                        <br>Runtime: 0.29 ms
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p18.html">&#60&#60 Problem 18</a>
+            <a class="second" href="p20.html">Problem 20 &#62&#62</a>
+
+        </div>
+    </div>
+</body> 

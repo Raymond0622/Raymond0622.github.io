@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 49</title>
+    <link rel="stylesheet" href="problems.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 49: Self powers
+        </h2>
+        <div class="white">
+            <p>
+                The series, 1<sup>1</sup> + 2<sup>2</sup> + 3<sup>3</sup> + ... + 10<sup>10</sup> = 10405071317.
+
+            </p>   
+            <p>      
+                Find the last ten digits of the series, 1<sup>1</sup> + 2<sup>2</sup> + 3<sup>3</sup> + ... + 1000<sup>1000</sup>.
+            
+            </p>
+ 
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            Problem is pretty simple. The best way to go about is NOT to calculate the sum 
+            and find modular 10^10. The number is gigantic. It has at least 1001 digits!
+        </p>
+        <p class="algo">
+            So, what we can do is calculate a partial sum as we increment the self powers. And whenever
+            the number is greater than 10^10, we only take the last 10 digits!
+        </p>
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/cc0e9059b80def42e5d436ff6844ed4b.js"></script>        
+        </div>       
+            <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 9110846700
+                        <br>Runtime: 104 ms
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p47.html">&#60&#60 Problem 47</a>
+            <a class="second" href="p49.html">Problem 49 &#62&#62</a>
+
+        </div>
+    </div>
+</body> 

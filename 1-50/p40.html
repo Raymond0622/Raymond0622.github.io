@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 40</title>
+    <link rel="stylesheet" href="problems.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 40: Champernowne's constant
+        </h2>
+        <div class="white">
+            <p>
+                An irrational decimal fraction is created by concatenating the positive integers:
+
+            </p>
+            <p>
+                
+                0.123456789101112131415161718192021...
+            </p>
+            <p>
+                It can be seen that the 12th digit of the fractional part is 1.
+                
+            </p>
+            <p>
+                If dn represents the nth digit of the fractional part, find the value of the following expression.
+                
+            </p>
+            <p>
+                d1 × d10 × d100 × d1000 × d10000 × d100000 × d1000000
+            </p>
+    
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            This is can be solved easily without coding. Let's go one by one and solve each d_n
+        </p>
+        <p class="algo">
+            d1 = 1. That's simple
+            d10 = 1. Also simple
+        </p>
+        <p class="algo">
+            d100 does take some effort. We first traverse how many one digit we go through, which is 9.
+            That leaves us with 91 digits to traverse to, which is 45 two digit, with one extract. 
+            Starting with 10, then we get 54 as the 45th digit starting with 10, so the next digit will be 5.
+        </p>
+        <p class="algo">
+            d1000, similarly, we go through 9 one digit, 90 two digit, which is total of
+            189 digits, leaving us with 1000 - 189 = 811 digits left. How many three digits?
+            Well 811/3 = 270. So the 303rd digit from 100 which is 369. But thats 810 digits total, 
+            we must take into account one additional digit to make it 3.
+        </p>
+        <p class="algo">
+            We can keepe doing this, but you guys get the point. Well, lets do d1000000.
+            <br>
+            <br>
+            one digit = 9 -> 9 digits total<br>
+            two digit = 90 -> 180 digits total <br>
+            three digit = 900 -> 2700 digits total <br>
+            four digit = 9000 -> 36000 digits total <br>
+            five digit = 90000 -> 450000 digits total <br>
+            Total = 488889 digits
+        </p>
+        <p class="algo">
+            Let's see how many digits are remaining: 1,000,000 - 488,889 = 511,111
+        </p>
+        <p class="algo">
+            We are on 6 digits now, so we must divide by 6. 511,111/6 = 85185 with remainder of 1.
+            So the 85185th digit from 100,000 is 185,184 but we have a remainder of 1, so its 1!
+        </p>
+    
+
+            <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 210
+                        <br>Runtime: n/a
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p39.html">&#60&#60 Problem 39</a>
+            <a class="second" href="p41.html">Problem 41 &#62&#62</a>
+
+        </div>
+    </div>
+</body> 

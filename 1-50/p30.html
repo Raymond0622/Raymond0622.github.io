@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 30</title>
+    <link rel="stylesheet" href="problems.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 30: Digit fifth powers</h2>
+        <div class="white">
+            <p>
+                Surprisingly there are only three numbers that 
+                can be written as the sum of fourth powers of their digits:
+            <p>
+                1634 = 1<sup>4</sup> + 6<sup>4</sup> + 3<sup>4</sup> + 4<sup>4</sup> <br>
+                8208 = 8<sup>4</sup>  + 2<sup>4</sup>  + 0<sup>4</sup>  + 8<sup>4</sup> <br>
+                9474 = 9<sup>4</sup>  + 4<sup>4</sup>  + 7<sup>4</sup>  + 4<sup>4</sup> <br>
+            </p>
+            <p>
+                As 1 = 1<sup>4</sup> is not a sum it is not included.
+            </p>
+    
+            <p>
+                The sum of these numbers is 1634 + 8208 + 9474 = 19316.
+                </p>
+            <p>
+            Find the sum of all the numbers that can be written as the sum of fifth powers of their digits.
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            They key part of this algorthim is find the limit of our brute force search.
+            What number should we go up to check for this special property?
+            Consider a 4 digit number. The maximum of digit fifth power is 236196
+            which has 6 digit. Hence, searching up to 4 digit number isn't enough.
+            How about 5 digits? 5 * 9^5 is 295245 which still has 6 digit. 6 digits? 6 *
+             9^5 is 354294 which has 6 digits! So, we can search all the way to 6 digits, specifically, 354294.
+        </p>
+
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/2109d4f81c7546a7b18a2cd84d101d66.js"></script>   
+        </div>      
+            <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 443839
+                        <br>Runtime: 2.9 seconds
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p29.html">&#60&#60 Problem 29</a>
+            <a class="second" href="p31.html">Problem 31 &#62&#62</a>
+
+        </div>
+    </div>
+</body> 

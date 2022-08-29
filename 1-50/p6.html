@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 6</title>
+    <link rel="stylesheet" href="problems.css">
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 6: Sum square difference </h2>
+        <div class="white">
+            <p>
+                <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+                <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+                The sum of squares of the first ten natural
+                numbers is,
+                $$ 1^2 + 2^2 + ... + 10^2 = 385$$
+            </p>
+            <p>
+               The square of the sum of the first ten natural numbers is,
+               $$ (1 + 2 + 3 + .. + 10)^2 = 55^2 = 3025 $$
+
+            </p>
+            <p>
+                Hence the difference between the sum of the squares of the 
+                first ten natural numbers and the square of the sum is:
+                \(3025-385 = 264\)
+            </p>
+            <p>
+                Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum
+
+            </p>
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            Super easy problem. There are exist nice formulas for both summation:
+            sum of squares:
+            $$\sum_{i=1}^n i^2 = \frac{(n)(n + 1)(2n + 1)}{6}$$
+            
+            sum of arthimetic sequence:
+            $$\sum_{i=1}^n a_0 + bi = \frac{(a_0 + a_0 + bn)}{2} $$
+            Essentially, just average of the first and last term
+         </p>
+    
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/8bff1efb4bd47e97680a9b0637694fb4.js"></script>        </div>
+        <div>
+            <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 25164150
+                        <br>Runtime: 0.8 ms
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p5.html">&#60&#60 Problem 4</a>
+            <a class="second" href="p7.html">Problem 6 &#62&#62</a>
+
+        </div>
+    </div>
+</body>
+</html>

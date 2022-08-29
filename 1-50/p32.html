@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 32</title>
+    <link rel="stylesheet" href="problems.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 32: Pandigital products</h2>
+        <div class="white">
+            <p>
+                We shall say that an n-digit number is pandigital if it makes use of all 
+                the digits 1 to n exactly once; for example, the 5-digit number, 15234, 
+                is 1 through 5 pandigital.
+
+            <p>
+                The product 7254 is unusual, as the identity, 39 × 186 = 7254, 
+                containing multiplicand, multiplier, and product is 1 through 9 pandigital.
+            </p>
+            <p>
+                        
+                Find the sum of all products whose multiplicand/multiplier/product 
+                identity can be written as a 1 through 9 pandigital.
+            </p>
+            <p>  
+                HINT: Some products can be obtained in more than one way so be 
+                sure to only include it once in your sum.            </p>
+            </p>
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            We first have to think about the allocation of these numbers as in what digit 
+            product are formed what two digit. If we have 2 two digit number, then,
+            the maximum product is 99 * 99 = 9801. But, this only contains 8 digits. So, 
+            it can't even be Pandigital. How abaout 1 digit and 4 digit number? This will work
+            along with 2, 3, 4 spread (2 digit x 3 digit = 4 digit).
+        </p>
+        <p class="algo">
+            So, we have two for loops: One factor that goes from a 1 digit number to 2 digit.
+            Another factor that goes from 3 digit number to 4 digit.
+        </p>
+        <p class="algo">
+            Checking if a number if pandigital is pretty simple. We caa use set() function or
+            use double for loop. 
+        </p>
+
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/a843cc400dae605760d2e04c5a3fb247.js"></script>        
+        </div>      
+            <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 45228
+                        <br>Runtime: 383 ms
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p31.html">&#60&#60 Problem 31</a>
+            <a class="second" href="p33.html">Problem 33 &#62&#62</a>
+
+        </div>
+    </div>
+</body> 

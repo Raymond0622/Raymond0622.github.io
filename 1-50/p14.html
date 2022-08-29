@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 14</title>
+    <link rel="stylesheet" href="problems.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 14: Longest Collatz sequence</h2>
+        <div class="white">
+            <p>
+                The following iterative sequence is defined for the set of positive integers:
+            </p>
+            <p>
+                n → n/2 (n is even) <br>
+                n → 3n + 1 (n is odd)
+            </p>
+            <p>
+                Using the rule above and starting with 13, 
+                we generate the following sequence:
+            </p>
+            <p>
+                13 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1
+            </p>
+            <p>
+                It can be seen that this sequence (starting at 13 and finishing at 1) 
+                contains 10 terms. Although it has not been proved yet (Collatz Problem), it is thought that all starting numbers finish at 1.
+            </p>
+            <p>
+            Which starting number, under one million, produces the longest chain?
+
+                NOTE: Once the chain starts the terms are allowed to go above one million.     
+            </p>
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            Famous unsolved math problem here. Definitely gears toward not iterating through 
+            every single number and Collatz sequence. Key part of this algorthim is to
+            keep track of the sequences of each number:
+        </p>
+        <p class="algo">
+            Consider the sequence above listed: <br>
+            <center>
+                13 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1
+
+            </center>
+        </p>
+        <p class="algo">
+            If we start at 26 for example, 
+            <center>
+            26 → 13 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1
+            </center>
+        </p>
+        <p class="algo">
+            26 results in the exact same sequence as 13, but we started from 26 instead. 
+            This is essence of this algorthim. We don't necessairly have to perform
+            Collatz to every single number. If we hit a number that has generated a sequence,
+            we can stop and keep track of the number of numbers in that particular sequence.
+            For example, 13 results in 10. But, 26 would just be one more than that. However, the problem
+            with this method is that we need to keep track of a lot of sequence. What's the maximum value
+            in the Collatz? Not sure. What's the size of the array we must create? Not sure.
+            I've seen to create some sort of brute force algorthim below... but still works!
+        </p>
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/80280339628fb4098164bc14a2e1e574.js"></script>        
+        </div>
+                <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 837799
+                        <br>Runtime: 30 seconds
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p13.html">&#60&#60 Problem 13</a>
+            <a class="second" href="p15.html">Problem 15 &#62&#62</a>
+
+        </div>
+    </div>
+</body>

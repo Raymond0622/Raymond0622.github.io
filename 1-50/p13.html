@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 12</title>
+    <link rel="stylesheet" href="problems.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 13: Large sum</h2>
+        <div class="white">
+            <p>
+                <a href="https://projecteuler.net/problem=13">Problem statement</a>      
+            </p>
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            It's a bit pointless to copy and paste 100 50-digit number onto the web
+            page.. Regardless..
+        </p>
+        <p class="algo">
+            Looks like since the number was big (50-digit), I divided the digits into 
+            5 different 10 digits:
+        </p>
+        <p class="algo">
+            $$ 1120481209 \quad 5812095812 \quad 8215801825 \quad 0923412498$$
+        </p>
+        <p class="algo">
+            I added numbers with each corresponding sections together and added the sections 
+            together taking into account of place-holders!
+        </p>
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/68e3348e24b2050951bfabb12745aaa8.js"></script>
+        </div>
+                <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 5537376230
+                        <br>Runtime: 0.2 ms
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p12.html">&#60&#60 Problem 12</a>
+            <a class="second" href="p14.html">Problem 14 &#62&#62</a>
+
+        </div>
+    </div>
+</body>

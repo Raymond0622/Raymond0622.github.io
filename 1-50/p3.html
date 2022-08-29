@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 1</title>
+    <link rel="stylesheet" href="problems.css">
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 3: Largest prime factor </h2>
+        <div class="white">
+            <p>
+                P3: The prime factors of 13195 are 5, 7, 13 and 29. <br>
+            </p>
+            <p>
+                What is the largest prime factor of the number 600851475143 ?
+            </p>
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            This was a good chance to practice some number theory though
+            the problem is much simpler looking back as I write this.
+        </p>
+        <p class ="algo">
+            Fermat's Factoring theorem assumes that the number we want to factor
+            is an odd number and since we are given the number we want to factor, 
+            this is not big of a deal. However, we can easily divide by two until
+            the number "runs out" of two's.
+        </p>
+        <p class="algo">
+            Incorporating the Fermat's theorem is enough to do. It's a fairly
+            easy algorthim and very intuitive to understand. One does not even
+            have to understand it to solve this. There were three major steps
+            in solving this problem
+        </p>
+        <p class="algo">
+            <ol class="algo">
+                <li>Get rid of any two's in the number. This is indicated using
+                    the variable "two" in the code
+                </li>
+                <li>Apply Fermat's Factorization method.
+                    <ul>
+                        <li>Returns 'prime' if a factor is prime</li>
+                        <li>Else, returns an array with two numbers that could be prime</li>
+                    </ul>
+                </li>
+                <li>Recursively apply Fermat's method to the remaining numbers that were
+                    outputs of Fermat's theorem. If the number is prime, store in an array.
+                    If not, apply Fermat again
+                </li>
+            </ol>
+        </p>
+        <p class="algo">
+            The code ends when all the numbers in a stored array (called "res" in the code)
+            is empty. The final step is just to count the number of occurence of each
+            unique prime (but that wasn't necessary). Maximum prime is easy enough to find 
+            using max() function
+        </p>
+        <p class="algo">
+            Notice that this code can intake any valid positive integer!
+        </p>
+        </p>
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/487970044a9c7890f19794c6208dd8de.js"></script>
+        </div>
+        <div>
+            <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 6857
+                        <br>Runtime: 112 ms
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p2.html"">&#60&#60 Problem 2</a>
+            <a class="second" href="p4.html">Problem 4 &#62&#62</a>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 39</title>
+    <link rel="stylesheet" href="problems.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 39: Integer right triangles
+        </h2>
+        <div class="white">
+            <p>
+                If p is the perimeter of a right angle triangle with integral length sides, {a,b,c}, there are exactly three solutions for p = 120.
+
+            </p>
+            <p>
+                
+{20,48,52}, {24,45,51}, {30,40,50}
+
+
+            </p>
+            <p>
+                For which value of p ≤ 1000, is the number of solutions maximised?
+
+            </p>
+    
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            Finally we get to some Pytogrorean triangle. I'm only excited because 
+            right triangles are a common theme/section of PE.
+        </p>
+        <p class="algo">
+            Ok. I can teach you guys about how to genereate primitive Pytogrorean triples.
+            But first, let's discuess the algorthim. We want to first generate primtive Pytogrorean triples.
+            Then, we want multiples of this triplet. These multiples are right triangles. Hence, it will suffice
+            the only condition that there is, EXCEPT the 1000 condition. That's enough. We create multiples
+            until we reach above 1000. 
+        </p>
+        <p class="algo">
+            So, now the meat of this problems. Primitive Pytogrorean triples are three positive integers
+            that are coprimes with another. Essentially, 
+            $$ GCD(a, b, c) = 1 $$
+            $$ a^2 + b^2 = c^2 $$
+            How do we generate such a, b, c?
+        </p>
+        <p class="algo">
+            There are formulas
+            $$ a = m^2 - n^2 $$
+            $$ b = 2mn $$
+            $$ c = m^2 + n^2 $$
+            Clearly, one can see that a can't be the greatest. However, it's not necessarily true that 
+            b > c, though the way I defined a, b, c tells us otherwise. Anyhow, if GCD(m, n) = 1. Then the resulting
+            triplet number will be prime. But, we want p <= 1000. So how far should we go up? c has to
+            be less than 1000, so m^2 + n^2 <= 1000, m < 31. Similary, a has to be positive
+            so, m > n. We have our conditions, lets code it up!
+
+        </p>
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/f06d940ce9d7dcb1282fe31d7a861c1c.js"></script>                </div>      
+            <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 840
+                        <br>Runtime: 1.1 ms
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p38.html">&#60&#60 Problem 38</a>
+            <a class="second" href="p40.html">Problem 40 &#62&#62</a>
+
+        </div>
+    </div>
+</body> 

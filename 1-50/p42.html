@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 42</title>
+    <link rel="stylesheet" href="problems.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 42: Coded triangle numbers
+        </h2>
+        <div class="white">
+            <p>
+                The nth term of the sequence of triangle numbers is given by, tn = ½n(n+1); 
+                so the first ten triangle numbers are:
+            </p>
+            <p>      
+                1, 3, 6, 10, 15, 21, 28, 36, 45, 55, ...
+
+            </p>
+            <p>
+                By converting each letter in a word to a number corresponding to its 
+                alphabetical position and adding these values we form a word value. For example, the word value for SKY is 19 + 11 + 25 = 55 = t<sub>10</sub>. If the word value is a triangle number then we shall call the word a triangle word.    
+            </p>
+            <p>
+                Using words.txt (right click and 'Save Link/Target As...'), a 16K text file containing nearly two-thousand common English words, how many are triangle words?
+
+            </p>
+    
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            Looking back at how I solved this, I did not like it. Triangular numbers are pretty easy to produce
+            The formula given to us and we can store these number in an array. 
+        </p>
+        <p class="algo">
+            After doing so, we can find the value corresponding to each name in the list using the ord() function
+            that's built into python. I explained this in earlier problems. This problem is pretty simple
+        </p>
+        <p class="algo">
+            Then, we check for each name value is it's in the array. However, we don't know the maximum value the name value
+            can achieve. So, we can keep changing the number of triangular values we add to the array
+            until we see some changes in the final count value (the number if triangular names)
+        </p>
+        <p class="algo">
+            What I should have done is check if name value is triangular or not by solving
+            $$ \frac{n(n + 1)}{2} = name_{value} $$
+            and check if n is positive integer.. either case, it works!
+
+        </p>
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/e20fc937b3dbf4cdadd411b69466dbca.js"></script>     
+        </div>       
+            <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 162
+                        <br>Runtime: 4.0 ms
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p41.html">&#60&#60 Problem 41</a>
+            <a class="second" href="p43.html">Problem 43 &#62&#62</a>
+
+        </div>
+    </div>
+</body> 

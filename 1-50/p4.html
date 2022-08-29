@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 4</title>
+    <link rel="stylesheet" href="problems.css">
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 4: Largest palindrome product </h2>
+        <div class="white">
+            <p>
+                A palindromic number reads the same both ways. The largest palindrome made 
+                from the product of two 2-digit numbers is 9009 = 91 × 99.
+            </p>
+            <p>
+                Find the largest palindrome made from the product of two 3-digit numbers.
+            </p>
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            Again, looking back. This algorthim could have been improved but 
+            we essentially start from the first three digit number and multiply with
+            another set of three digit number indicated by the two for loops
+            Simple enough. These problems will get harder..
+        </p>
+        <p class ="algo">
+            A little bit about the Palindrome function: I could havee used list() and str()
+            to turn the number into a list of the digits but I found this out later
+            as I learned more about Python. However, this works for now. Notice
+            that the runtime is not that great..
+    
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/95906134af3b7cc51bbb47b67188e274.js"></script>
+        </div>
+        <div>
+            <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 906609
+                        <br>Runtime: 8.20 seconds
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p3.html"">&#60&#60 Problem 3</a>
+            <a class="second" href="p5.html">Problem 5 &#62&#62</a>
+
+        </div>
+    </div>
+</body>
+</html>

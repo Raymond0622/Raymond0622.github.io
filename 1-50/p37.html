@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 37</title>
+    <link rel="stylesheet" href="problems.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 37: Truncatable primes
+        </h2>
+        <div class="white">
+            <p>
+                The number 3797 has an interesting property. Being prime itself, 
+                it is possible to continuously remove digits from left to right, 
+                and remain prime at each stage: 3797, 797, 97, and 7. Similarly 
+                we can work from right to left: 3797, 379, 37, and 3.
+
+
+            <p>Find the sum of the only eleven primes that are both truncatable
+                 from left to right and right to left.
+
+            </p>
+            <p> 
+                NOTE: 2, 3, 5, and 7 are not considered to be truncatable primes.
+            </p>
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            Interesting problem. It's important to note that primes can containing
+            even number digits. However, for prime to be truncatable prime, it can't contain 
+            even numbers. For example, if we truncate 579141, we start off with 1. Then,
+            the 57914 is not a prime. This works for all even numbers except 2.
+            For example, 235791 can truncated to 2, but 2 is a prime. But we ignore this exception.
+            The method is pretty simple. Start from two-digit prime, greater than 23. 23 works, 
+            but we do not take into account in this code. When we find such prime, we add one to a 
+            variable and keep searching until we hit 11! 
+        </p>
+        <p class="algo">
+            Notice that in my code I have variables that will only allow 1, 3, 5, 7, 9 to be 
+            digits of the prime. Also, I have two for loops checking this a prime: One direction
+            truncating left to right, and another going right to left.
+            Both need to be required.
+        </p>
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/9ee7cc06b9df6a4fa1133723fdb6e385.js"></script>        
+        </div>      
+            <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 748317
+                        <br>Runtime: 26.4 seconds
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p36.html">&#60&#60 Problem 36</a>
+            <a class="second" href="p38.html">Problem 38 &#62&#62</a>
+
+        </div>
+    </div>
+</body> 

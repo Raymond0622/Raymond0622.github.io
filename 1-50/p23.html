@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 20</title>
+    <link rel="stylesheet" href="problems.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div class="table">
+        <h2>Problem 23: Non-abundant sums</h2>
+        <div class="white">
+            <p>
+                A perfect number is a number for which the sum of its 
+                proper divisors is exactly equal to the number. For example, 
+                the sum of the proper divisors of 28 would be 1 + 2 + 4 + 7 + 
+                14 = 28, which means that 28 is a perfect number.
+
+            </p>
+            <p>
+                A number n is called deficient if the sum of its proper divisors 
+                is less than n and it is called abundant if this sum exceeds n.
+
+            </p>
+            <p>
+                As 12 is the smallest abundant number, 1 + 2 + 3 + 4 + 6 = 16, 
+                the smallest number that can be written as the sum of two abundant 
+                numbers is 24. By mathematical analysis, it can be shown that 
+                all integers greater than 28123 can be written as the sum of 
+                two abundant numbers. However, this upper limit cannot be reduced 
+                any further by analysis even though it is known that the greatest 
+                number that cannot be expressed as the sum of two abundant numbers 
+                is less than this limit.
+            </p>
+            <p>
+                Find the sum of all the positive integers which cannot be 
+                written as the sum of two abundant numbers.
+            </p>
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            I never really got around this problem. Solved this fairly recently. So, we 
+            have three steps
+            <ol class="algo">
+                <li>
+                    First, find the sum of all proper divisors up to 28123
+                    <ul>
+                        <li>
+                            This is an updated version of divisor sum. Instead of using the formula 
+                            given in <a href="p21.html">Problem 21</a>, we add each multiple of the 
+                            dummy variable in the for loop to a given array index (val, in this case).
+                            I think it's easier to show in a gif:
+                            <ol>
+                                <li>
+                                    See for example, we start with an array thats filled with ones.
+                                    Since every number is divisible by 1. Then we start with two. Any index
+                                    that is divisible by 2 will have to have the two included in the sum. Hence, <br>
+                                    <br>
+                                    <img src="../images/p23image.gif" width="600" height="80">
+                                    <p>
+                                        We can do this again for the next integer: 3
+                                        <br>
+                                        <img src="../images/p23_image2.gif" width="600" height="80">
+                                    </p>
+                                </li>
+                            </ol>
+                            
+                        </li>
+                    </ul>
+                <li> 
+                    Second, we have to subtract each divisor sum by the number since we want proper
+                    divisors
+                </li>
+                <li> 
+                    Then, we pickout abundant numbers, so go through the list and check if d(n) > n
+                </li>
+                <li> 
+                    Lastly, we create a matrix filled with zeroes (ab matrix) and allow the index to be the sum of
+                    two abundant numbers. We go through two for loops (since we need a sum),letting 
+                    ab[sum of two abundant numbers] = 1. We can check which index contains a 0. And we just
+                    sum up all the indices that contain a 0!
+                </li>
+            </ol>
+        </p>
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/941efe0855088efa7cc94ebd090ccadf.js"></script>       
+         </div>
+         <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 4179871
+                        <br>Runtime: 8.8 seconds
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p22.html">&#60&#60 Problem 22</a>
+            <a class="second" href="p24.html">Problem 24 &#62&#62</a>
+
+        </div>
+    </div>
+</body> 

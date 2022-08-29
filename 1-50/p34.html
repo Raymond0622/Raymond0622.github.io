@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 34</title>
+    <link rel="stylesheet" href="problems.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 34: Digit factorials
+        </h2>
+        <div class="white">
+            <p>
+                145 is a curious number, as 1! + 4! + 5! = 1 + 24 + 120 = 145.
+
+            <p>Find the sum of all numbers which are equal to the sum of the factorial of their digits.
+
+            </p>
+            <p> 
+                Note: As 1! = 1 and 2! = 2 are not sums they are not included.
+            </p>
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            Similar to last question, we need to find the limit to how far we 
+            should search for these numbers. Consider a 5 digit number. Then,
+            the maximum digit factorials is 5 * 9! = 1814400. Let's look at 8 digits:
+            8 * 9! = 2903040, only has 7 digit. How about 7 digit? 7 * 9! = 2540160, which has
+            7 digit like we wanted! It's impossible for an 8 digit number to have its digit factorial
+            to equal to its number. The maximum is 2903040 which only has 7 digits. So, we 
+            only have to check up to 2540160. Coding factorials and checking this is simple!
+        </p>
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/9ee7cc06b9df6a4fa1133723fdb6e385.js"></script>        
+        </div>      
+            <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 40730
+                        <br>Runtime: 29.3 seconds
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p33.html">&#60&#60 Problem 33</a>
+            <a class="second" href="p35.html">Problem 35 &#62&#62</a>
+
+        </div>
+    </div>
+</body> 

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 33</title>
+    <link rel="stylesheet" href="problems.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 33: Digit cancelling fractions
+        </h2>
+        <div class="white">
+            <p>
+                The fraction 49/98 is a curious fraction,
+                 as an inexperienced mathematician in attempting 
+                 to simplify it may incorrectly believe that 49/98 = 4/8, 
+                 which is correct, is obtained by cancelling the 9s.
+
+            <p>We shall consider fractions like, 30/50 = 3/5, to be trivial examples.
+            </p>
+            <p> 
+                There are exactly four non-trivial examples of
+                 this type of fraction, less than one in value, 
+                 and containing two digits in the numerator and denominator.
+            </p>
+            <p>  
+                If the product of these four fractions is given in its lowest 
+                common terms, find the value of the denominator.
+            </p>
+            </p>
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            There's no real algorthim in this problem but rather come up with a way
+            to directly check if two fractions are equal given that there's only
+            exactly ONE digit in common. So procedure is as follows:
+            <ol class="algo">
+                <li>
+                    Make two for loops for the numerator and denomiator
+                </li>
+                <li>
+                    Take into account of zero exist in the digits, if it does,
+                    it doesn't count as seen by the problem statement
+                </li>
+                <li>
+                    Find the intersection of the digits of numerator and denominator.
+                    If the length of the intersection is greater than 1, skip. If it's one, 
+                    check if by removing the common digit is the same as the original digit
+                </li>
+                <li> 
+                    Continue throughout the for loops!
+                </li>
+            </ol>
+        </p>
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/3594a0d333217b50eff2cde5022ff96f.js"></script>       
+         </div>      
+            <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 100
+                        <br>Runtime: 44 ms
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p32.html">&#60&#60 Problem 32</a>
+            <a class="second" href="p34.html">Problem 34 &#62&#62</a>
+
+        </div>
+    </div>
+</body> 

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 46</title>
+    <link rel="stylesheet" href="problems.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 46: Goldbach's other conjecture
+        </h2>
+        <div class="white">
+            <p>
+                It was proposed by Christian Goldbach that every odd composite number can be written as the sum of a prime and twice a square.
+                  
+            </p>
+            <p>      
+                <pre>
+                    9 = 7 + 2×1<sup>2</sup>
+                    15 = 7 + 2×2<sup>2</sup>
+                    21 = 3 + 2×3<sup>2</sup>
+                    25 = 7 + 2×3<sup>2</sup>
+                    27 = 19 + 2×2<sup>2</sup>
+                    33 = 31 + 2×1<sup>2</sup>
+                </pre>
+            </p>
+            <p>
+                It turns out that the conjecture was false.
+
+                What is the smallest odd composite that cannot be written as the sum of a prime and twice a square?          </p>
+            </p>
+           
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            This is rather simple question. For every composite, we can either loop through all possible primes
+            upt to the odd composite number. For example, if we want to find 51, then we would loop all the primes up to 51
+            which is 2, 3, 5, 7 ... 47 and check for each prime if there exists a perfect square after subtracting this prime.
+        </p>
+        <p class="algo">
+            OR we can loop through all possible squares up to this odd composite. So for 51, it would up to 7<sup>2</sup>
+                and check if after subtracting this square, it leaves a prime. I chose this option!
+        </p>
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/2284cca53ac8c690ba99bb13bc0e90f3.js"></script>        
+        </div>       
+            <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 5777
+                        <br>Runtime: 3.6 seconds
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p45.html">&#60&#60 Problem 45</a>
+            <a class="second" href="p47.html">Problem 47 &#62&#62</a>
+
+        </div>
+    </div>
+</body> 

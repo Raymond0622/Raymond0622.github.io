@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 24</title>
+    <link rel="stylesheet" href="problems.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 24: Lexicographic permutations</h2>
+        <div class="white">
+            <p>
+                A permutation is an ordered arrangement of objects. 
+                For example, 3124 is one possible permutation of the 
+                digits 1, 2, 3 and 4. If all of the permutations are 
+                listed numerically or alphabetically, we call it lexicographic order. 
+                The lexicographic permutations of 0, 1 and 2 are:
+
+            </p>
+            <p>
+                <center>
+                012,   021 ,  102 ,  120  , 201  , 210
+               </center>
+
+            </p>
+            <p>
+                What is the millionth lexicographic permutation 
+                of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9?
+            </p>
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            This is more of a math problem thatn anything. The key part of this problem is to use
+            factorials. Notice in the example given that the first 6 lexicographic numbers
+            are permutations of 0,1,2. So, we can utilize how many premutatiosn are required to filled
+            1,000,000 positions.
+        </p>
+        <p class="algo">
+            There are 10! Lexiographic permutations using 0-9 digits, equivalent to 3,628,800, which
+            exceeds 1,000,000. Hence, we start at 9! We see that it takes, we went through all the digits
+            that start with 0 or 1 since 9! = 362880. So 2*9! is 725760. Now, we have 274240 numbers
+            left to go through. But we know that the starting digit is 2.
+        </p>
+        <p class="algo">
+            Now, since we have used one digit, there are 9 digits left. But we must check how many 
+            numbers starting with a particular number we went through. This is a similar process as above:
+            8! = 40320, 6*8! = 241920, now we have 32,320 digits to go through. We can keep doing this process
+            and we are left with the 1,000,000th lexicographic number. Code is still provided!
+        </p>
+
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/985a90c8c7806680105942c06ca61469.js"></script>        
+        </div>
+         <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 2783915460
+                        <br>Runtime: N/A
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p23.html">&#60&#60 Problem 23</a>
+            <a class="second" href="p25.html">Problem 25 &#62&#62</a>
+
+        </div>
+    </div>
+</body> 

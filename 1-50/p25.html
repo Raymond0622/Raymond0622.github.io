@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 25</title>
+    <link rel="stylesheet" href="problems.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 25: 1000-digit Fibonacci number</h2>
+        <div class="white">
+            <p>
+                The Fibonacci sequence is defined by the recurrence relation:
+            </p>    
+            <p>
+                Fn = Fn−1 + Fn−2, where F1 = 1 and F2 = 1.
+                Hence the first 12 terms will be:
+            </p>
+            <p>
+                <pre>
+                        F1 = 1
+                        F2 = 1
+                        F3 = 2
+                        F4 = 3
+                        F5 = 5
+                        F6 = 8
+                        F7 = 13
+                        F8 = 21
+                        F9 = 34
+                        F10 = 55
+                        F11 = 89
+                        F12 = 144
+                </pre>
+            </p>
+            <p>         
+                The 12th term, F12, is the first term to contain three digits.
+            </p>
+            <p>
+                What is the index of the first term in the Fibonacci sequence to contain 1000 digits?
+
+            </p>
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            We can easily bruth force this. Well, it's what I solved this problem sort of.
+            Essentially, we keep track of the number of digits in a array until we hit 1000 digits.
+            There's nothing special here. Rather than calculating the number of digits from the 
+            beginning of the digit: (i.e, iteratively divide by 10, until we hit zero, anmd
+            keep track of how many 10's we divided out). Instead of this method, we can keep track of
+            my many digits were in Fib_(n-1) if we want to find Fib_n. It can either increase in digit by 1
+            or remain the same number of digit. So, all we have to track is this difference!
+        </p>
+
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/aed759354f1e9f08307c0c085f41dc94.js"></script>        </div>
+         <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 4782
+                        <br>Runtime: 19 ms
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p24.html">&#60&#60 Problem 24</a>
+            <a class="second" href="p26.html">Problem 26 &#62&#62</a>
+
+        </div>
+    </div>
+</body> 

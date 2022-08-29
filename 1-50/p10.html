@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 10</title>
+    <link rel="stylesheet" href="problems.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+                <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 10: Summation of primes</h2>
+        <div class="white">
+            <p>
+                
+                The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+            </p>
+            <p>
+                Find the sum of all the primes below two million.
+            </p>
+            
+            </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+             Finally, I use the Sieve of Erathosene method. I sugguest everyone look this up
+             But, essentially, sieve method is as follows:
+        </p>
+        <p class="algo">
+            <ol style="margin:30px" class="algo">
+                <li>
+                    Create a list of integers you want to go up to
+                </li>
+                <li>
+                    Start from p = 2 as it is the smallest prime
+                </li>
+                <li>
+                    Mark all numbers up to N that is a multiple of this prime (2)
+                </li>
+                <li>
+                    Find the next smallest number that is not marked (this is your next prime)
+                </li>
+                <li> Repeat step 2 but with this new prime</li>
+            </ol>
+        </p>
+        <p class="algo">
+            It's actaully sufficient to start from p^2 with every new prime we encounter, 
+            but that's not too important. Well, it will be for future cases. My code does not 
+            run optimally even though I understood the method and incorporated. I made some
+            adjustment in later problems...
+        </p>
+        <p class="algo">
+            Anyhow, Wikipedia has a good demonstration of how the sieve method works:
+            <center>
+            <img class="sieve" src="../images/Sieve_of_Eratosthenes_animation.gif"
+            <br>
+            <p>
+                From: Wikipedia
+            </p>
+            </center>
+
+        </p>
+
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/8b30fb2d5438c8b723a62cb8005065f1.js"></script>        </div>         
+            <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 142913828922
+                        <br>Runtime: 15.9 seconds
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p9.html">&#60&#60 Problem 9</a>
+            <a class="second" href="p11.html">Problem 11 &#62&#62</a>
+
+        </div>
+    </div>
+</body>
+</html>

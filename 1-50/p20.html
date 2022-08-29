@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 20</title>
+    <link rel="stylesheet" href="problems.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 20: Factorial digit sum</h2>
+        <div class="white">
+            <p>
+                n! means n × (n − 1) × ... × 3 × 2 × 1
+
+            </p>
+            <p>
+                For example, 10! = 10 × 9 × ... × 3 × 2 × 1 = 3628800,
+                and the sum of the digits in the number 10! is 3 + 6 + 2 + 8 + 8 + 0 + 0 = 27.
+            </p>
+            <p>
+                Find the sum of the digits in the number 100!
+            </p>
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            Looking back at my solution, it's disgusting. I calculated 100! and
+            find the digits as previous problems. What should have been done is divide by 10
+            whenever the number becomes divisible by 10 which first occurs with 5! This works because
+            trailing zeros do not affect the summation of digits... However, the code seems to run quickly.
+            This definitely does not work for bigger factorials...
+        </p>
+        
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/60769c7747960b419ec3bada8b11d80e.js"></script>            </div>
+            <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 648
+                        <br>Runtime: 0.53 ms
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p19.html">&#60&#60 Problem 19</a>
+            <a class="second" href="p21.html">Problem 21 &#62&#62</a>
+
+        </div>
+    </div>
+</body> 

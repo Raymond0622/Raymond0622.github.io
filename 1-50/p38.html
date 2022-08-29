@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 37</title>
+    <link rel="stylesheet" href="problems.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 38: Pandigital multiples
+        </h2>
+        <div class="white">
+            <p>
+                Take the number 192 and multiply it by each of 1, 2, and 3:
+            </p>
+            <p>
+                <pre>
+                    192 × 1 = 192
+                    192 × 2 = 384
+                    192 × 3 = 576
+                </pre>
+            </p>
+            <p>
+                By concatenating each product we get the 1 to 9 pandigital,
+                 192384576. We will call 192384576 the concatenated product 
+                 of 192 and (1,2,3)
+
+            </p>
+            <p>
+                The same can be achieved by starting with 9 and multiplying 
+                by 1, 2, 3, 4, and 5, giving the pandigital, 918273645, which 
+                is the concatenated product of 9 and (1,2,3,4,5).
+
+            </p>
+            <p>
+                What is the largest 1 to 9 pandigital 9-digit number 
+                that can be formed as the concatenated product of an
+                 integer with (1,2, ... , n) where n > 1?
+
+            </p>
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            Another Pandigital question. The best way to tackle this problem is to 
+            restrict our search space. Since we want the largest pandigital number,
+            we can utilize the given example to use 91827365. Let's think about the way 
+            we can create a concatenated 9 digit Number
+            <ol class="algo">
+                <li>
+                    3 Three digit numbers as seen in the example, without producing new digit
+                </li>
+                <li>
+                    2 Four digit numbers. We can get one new digit, making 5 + 4 digit total
+                </li>
+                
+            </ol>
+        </p>
+        <p class="algo">
+            There are othere ways. However, if you take a look at the second list, we can control 
+            the first four digits manually. We can pick a four digit number, and find  multiple
+            of this four digit number tht yields and 9 Pandigitala number! <br>
+            <br>
+            We start our search using 9183 since the example given to us is 918273645. Since we want the 
+            maximum digit, we start from 9183, while keeping it pandigital!
+        </p>
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/9e124aa6bd166623019872c5f6ee77e0.js"></script>
+                </div>      
+            <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 932718654
+                        <br>Runtime: 11 ms
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p37.html">&#60&#60 Problem 37</a>
+            <a class="second" href="p39.html">Problem 39 &#62&#62</a>
+
+        </div>
+    </div>
+</body> 

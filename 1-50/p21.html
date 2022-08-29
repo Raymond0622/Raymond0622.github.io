@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 20</title>
+    <link rel="stylesheet" href="problems.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 21: Amicable numbers</h2>
+        <div class="white">
+            <p>
+                Let d(n) be defined as the sum of proper divisors 
+                of n (numbers less than n which divide evenly into n).
+
+            </p>
+            <p>
+                If d(a) = b and d(b) = a, where a ≠ b, then a and b are an amicable pair 
+                and each of a and b are called amicable numbers
+
+            </p>
+            <p>
+                For example, the proper divisors of 220 are 1, 2, 4, 5, 10, 11, 20, 22, 44, 55 
+                and 110; therefore d(220) = 284. The proper divisors of 284 are 1, 2, 4, 
+                71 and 142; so d(284) = 220.
+            </p>
+            <p>
+                Evaluate the sum of all the amicable numbers under 10000
+            </p>
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            I'm sure there are specially properties involving the conditions of amicable pairs.
+            However, I did not exploit this and used factorazation again. What I should have done
+            is used the multplicative property of sum of divisors formula to calculate
+            each d(n)
+        </p>
+        <p class="algo">
+            My code contains three main functions:
+            <ul class="algo">
+                <li>Two(): Gets rid of any factors of two for Fermat's factorization 
+                    <ul>
+                        <li> Outputs the number and the power of two that exists in the number</li>
+                    </ul>
+                </li>
+                <li>Fermat(): we have seen this before.</li>
+                <li>Power(): Outputs a set of primes and another list with powers
+                    associated with each prime
+                </li>
+            </ul>
+        </p>
+        <p class="algo">
+            There's a neat formula for calculating the sum of divisors:
+            $$\Pi_{i=1}^k \frac{p_i^{m_i+1} - 1}{p_i -1 } $$
+        </p>
+        <p class="algo">
+            There's a neat intuitive way of understand this formula. To formulate a divisor, we can take
+            any combination of primes and any combinations of their associated powers. For example, 24 
+            can be represented by 2<sup>3</sup> x 3.
+        </p>
+        <p class="algo">
+            Factors are 1, 2, 3, 4, 6, 8, 12, 24
+            <br>
+            If we look at these factors, we see that each one of them are some combination of
+            Hence, we can determine the some this way:
+            $$ (1 + 2^0 + 2^1 + 2^2 + 2^3) * (1 + 3^0 + 3^1) $$
+        </p>
+        <p class="algo">
+            We see that if we "FOIL" (Front, outside, inside, last), if you remember from middle
+            school, we get all the factors that are listed above. Looking at each product, we seee that 
+            they are basically geometric sum of the primes up to each power. Hence, we get that formula 
+            above for any generic number. It's pretty nice!
+        </p>
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/13eb48a73d26e057b9edfe63cf952806.js"></script>           
+        </div>
+         <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 648
+                        <br>Runtime: 0.53 ms
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="p20.html">&#60&#60 Problem 19</a>
+            <a class="second" href="p22.html">Problem 21 &#62&#62</a>
+
+        </div>
+    </div>
+</body> 

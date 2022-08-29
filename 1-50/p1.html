@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 1</title>
+    <link rel="stylesheet" href="problems.css">
+</head>
+       
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../PE.html">Project Euler</a>
+        <a href="../teach.html">Teaching</a>
+        <a href="../proj.html">Projects</a>
+        <a href="../gal.html"> Gallery</a>
+    </div>
+    <div>
+        <h2>Problem 1 statement: </h2>
+        <div class="white">
+            <p>
+                P1: If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+
+                Find the sum of all the multiples of 3 or 5 below 1000.
+            </p>
+        </div>
+        <br>
+        <h3>Algorthim:</h3>
+        <p class="algo">
+            Pretty simple problem. This was when I started learning Python; hence, the code may
+            seem very.... awkward and not well optimized.
+            Essential we sum the all multiples of three and five
+            separately. Then subtract integers that were counted twice:
+            multiples of 15.
+        </p>
+        <p class ="algo">
+            sum3 represents sum of all multiples of three <br>
+            sum5 represents sum of all multiples of five<br>
+            sum15 represents sum of multiples of 15
+        </p>
+        <h3>Code:</h3>
+        <div class="code">
+            <script src="https://gist.github.com/Raymond0622/6097e8506f2f72a9dee267b3569972bb.js"></script>
+        </div>
+        <div>
+            <h3>Result:</h3>
+            <div>
+                <center>
+                    <code class="ans">
+                        Answer: 233168
+                        <br>Runtime: 1.16 ms
+                    </code>
+                </center>
+            </div>
+        </div>
+        <div class="next">
+            <a class="first" href="../PE.html"">&#60&#60 PE Main menu</a>
+            <a class="second" href="p3.html">Problem 3 &#62&#62</a>
+
+        </div>
+    </div>
+</body>
+</html>
