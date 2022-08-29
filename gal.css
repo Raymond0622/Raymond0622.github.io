@@ -1,0 +1,32 @@
+.list {
+    width:50%;
+    margin: 0 auto;
+}
+.musicList {
+    width:50%;
+    margin: 0 auto;
+}
+.galpara {
+    margin-left:250px;
+    margin-right:250px;
+    font-weight:bold;
+    font-size:20px;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+.list ul li  ul {
+    font-style:italic;
+    font-weight:bold;
+}
+
+li {
+    margin:10px 0;
+}
+
+.example {
+    width:50%;
+    margin: 0 auto;
+}
+.blank {
+    height:auto;
+}
