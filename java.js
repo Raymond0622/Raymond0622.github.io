@@ -121,7 +121,7 @@ Mendelssohn.AddSong('Piano', 'Concerto', '1', 'G-m', '25', 1130);
 Mendelssohn.AddSong('Violin', 'Concerto', '1', 'E-m', '64', 1590);
 Mendelssohn.AddSong('Piano', 'Trio', '1', 'D-m', '49', 1870);
 Mendelssohn.AddSong('Symphony', 'Overture', 'NA', 'B-m', '26', 615); //
-Mendelssohn.AddSong('Symphony', 'Symphony', 'NA', 'E', '21', 720);
+Mendelssohn.AddSong('Symphony', 'Overture', 'NA', 'E', '21', 720);
 
 Shostakovich.AddSong('Piano', 'Concerto', '2', 'F', '102', 1190);
 Shostakovich.AddSong('Cello', 'Concerto', '1', 'E-flat', '107', 1630);
