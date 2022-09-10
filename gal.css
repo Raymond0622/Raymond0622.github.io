@@ -24,9 +24,24 @@ li {
 }
 
 .example {
-    width:50%;
-    margin: 0 auto;
+    margin-left:250px;
+    margin-right:250px;
+    
 }
 .blank {
     height:auto;
+}
+
+table th, td{
+    
+    background-color:lightblue;
+    border: 10px solid lightseagreen;
+    padding:10px;
+}
+table {
+    border-spacing:10px;
+}
+.piano {
+    background-color:lightpink;
+    border:10px solid lightcoral;
 }
