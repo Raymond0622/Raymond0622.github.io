@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classical</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    
+    <audio preload='auto' id="audio">
+    </audio>
+    <div>
+        <div class="responses">
+            <div class="final">
+                Final Score: &NonBreakingSpace;
+                <div id="fpoints" class="fpoints">
+                    
+                </div>
+                Num Question: &NonBreakingSpace;
+                <div id="fques" class="fques">
+
+                </div>
+            </div>
+            <div class="store">
+                Points: &NonBreakingSpace;
+                <div id="points" class="points">
+                    
+                </div>
+            </div>
+            <table class="res">
+                <tr>
+                    <td>
+                        Guesses:
+                    </td>
+                    <td id="nameAns" class="nameAns">
+                        Artist
+                    </td>
+                    <td id="instruAns" class="instruAns">
+                        Year
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+    <div class="titleSlide">
+        <div class="flex-center flex-column">
+            <div class="buttons">
+                <button onclick="playAudio(startTime, j)" class="buttong b1">Play Audio</button>
+                <button onclick="pauseAudio()" class="buttong b2">pause audio</button> 
+                <button onclick="Submit()" class="buttong b3">Submit</button>
+                <button onclick="nextQuestion()" class="buttong b4">Next Question</button>
+            </div>
+            <br>
+            <p> Composer:</p>
+            <table id="composers">
+                <tr>
+                <td><button id='1' class="com compose1">21 Pilots</button></td>
+                <td><button id='2' class="com compose2">50 Cents</button></td>
+                <td><button id='6' class="com compose6">Adele</button></td>
+                <td><button id='1' class="com compose1">AJR</button></td>
+                <td><button id='5' class="com compose5">Alicia Keys</button></td>
+                <td><button id='3' class="com compose3">Avicii</button></td>
+                <td><button id='1' class="com compose1">Beyonce</button></td>
+                <td><button id='2' class="com compose2">Britney Spears</button></td>
+                <td><button id='4' class="com compose4">BTS</button></td>
+                <td><button id='2' class="com compose2">Celine Dion</button></td>
+                <td><button id='3' class="com compose3">Christina Aguilera</button></td>
+                <td><button id='1' class="com compose1">Coldplay</button></td>
+                </tr>
+                <tr>
+                
+                <td><button id='6' class=" com compose6">Dave Matthews</button></td>
+                <td><button id='4' class=" com compose4">Drake</button></td>
+                <td><button id='2' class=" com compose2">Dua Lipa</button></td>
+                <td><button id='3' class=" com compose3">Ed Shreeran</button></td>
+                <td><button id='1' class=" com compose1">Eminem</button></td>
+                <td><button id='5' class=" com compose5">Foo Fighters</button></td>  
+                <td><button id='2' class="com compose2">Green Day</button></td>
+                <td><button id ='5'class="com compose5">Imagine Dragons</button></td>
+                <td><button id='4' class="com compose4">Incubus</button></td>
+                <td><button id='3' class="com compose3">Jay Z</button></td>
+                <td><button id='5'class="com compose5">Jennifer Lopez</button></td>
+                <td><button id='2' class="com compose2">John Legend</button></td>             
+                </tr>
+                <tr>
+                    
+                    <td><button id='6' class="com compose6">John Mayer</button></td>
+                    <td><button id='3' class="com compose3">Johnny Cash</button></td>
+                    <td><button id='2' class="com compose2">Jonas Brothers</button></td>
+                    <td><button id='2' class="com compose2">Justin Bieber</button></td>
+                    <td><button id='5' class="com compose5">Justin Timberlaake</button></td>
+                    <td><button id='4' class="com compose4">Kanye West</button></td>
+                    <td><button id='3' class="com compose3">Katy Perry</button></td>
+                    <td><button id='5' class="com compose5">Kendrick Lamar</button></td>
+                    <td><button id='2' class="com compose2">Korn</button></td>
+                    <td><button id='6' class="com compose6">Linkin Park</button></td>
+                    <td><button id='3' class="com compose3">Madonna</button></td>
+                    <td><button id='2' class="com compose2">Mariah Carey</button></td>
+                </tr>
+                <tr>
+                    <td><button id='2' class="com compose2">Maroon 5</button></td>
+                    <td><button id='5' class="com compose5">Michael Jackson</button></td>
+                    <td><button id='4' class="com compose4">Miley Cyrus</button></td>
+                    <td><button id='3' class="com compose3">Modest Mouse</button></td>
+                    <td><button id='5' class="com compose5">Muse</button></td>
+                    <td><button id='2' class="com compose2">Ravel</button></td>
+                    <td><button id='6' class="com compose6">OutKast</button></td>
+                    <td><button id='3' class="com compose3">Phish</button></td>
+                    <td><button id='2' class="com compose2">Pink</button></td>
+                    <td><button id='2' class="com compose2">Post Malone</button></td>
+                    <td><button id='5' class="com compose5">Radiohead</button></td>
+                    <td><button id='4' class="com compose4">Rihanna</button></td>
+                </tr>
+                <tr>
+                    
+                    <td><button id='3' class="com compose3">Sam Smith</button></td>
+                    <td><button id='6' class="com compose6">Shaggy</button></td>
+                    <td><button id='5' class="com compose3">Shakira</button></td>
+                    <td><button id='3' class="com compose3">Shawn Mendes</button></td>
+                    <td><button id='6' class="com compose6">Sheryl Crow</button></td>
+                    <td><button id='4' class="com compose3">Snow Patrol</button></td>
+                    <td><button id='2' class="com compose2">StaindDoves</button></td>
+                    <td><button id='5' class="com compose5">Sting</button></td>
+                    <td><button id='2' class="com compose2">Sugarland</button></td>
+                    <td><button id='3' class="com compose3">Taylor Swift</button></td>
+                    <td><button id='2' class="com compose2">The Hives</button></td>
+                    <td><button id='2' class="com compose2">The Killers</button></td>
+                    
+                </tr>
+                <tr>
+                    <td><button id='5' class="com compose5">The Weeknd</button></td>
+                    <td><button id='4' class="com compose4">Tool</button></td>
+                    <td><button id='5' class="com compose5">Travis Scott</button></td>
+                    <td><button id='4' class="com compose4">U2</button></td>
+                    <td><button id='5' class="com compose5">Usher</button></td>
+                    <td><button id='4' class="com compose4">Westlife</button></td>
+                </tr>
+                
+            </table>
+            <p>
+                Year of release:
+            </p>
+            <table id="instruments">
+                <tr>
+                        <td><button id='1' class="in instru1">2000</button></td>
+                        <td><button id='3' class="in instru3">2001</button></td>
+                        <td><button id='4' class="in instru4">2002</button></td>
+                        <td><button id='6' class="in instru6">2003</button></td>
+                        <td><button id='5' class="in instru5">2004</button></td>
+                        <td><button id='2' class="in instru2">2005</button></td>
+                        <td><button id='3' class="in instru3">2006</button></td>
+                        <td><button id='2' class="in instru2">2007</button></td>
+                        <td><button id='1' class="in instru1">2008</button></td>
+                        <td><button id='5' class="in instru5">2009</button></td>
+                        <td><button id='6' class="in instru6">2010</button></td>
+                        
+                    </tr>
+                    <tr>
+                        <td><button id='4' class="in instru4">2011</button></td>
+                        <td><button id='2' class="in instru2">2012</button></td>
+                        <td><button id='3' class="in instru3">2013</button></td>
+                        <td><button id='3' class="in instru3">2014</button></td>
+                        <td><button id='1' class="in instru1">2015</button></td> 
+                        <td><button id='2' class="in instru2">2016</button></td> 
+                        <td><button id='3' class="in instru3">2017</button></td>
+                        <td><button id='2' class="in instru3">2018</button></td>
+                        <td><button id='1' class="in instru1">2019</button></td> 
+                        <td><button id='6' class="in instru2">2020</button></td> 
+                        <td><button id='4' class="in instru1">2021</button></td> 
+                        <td><button id='5' class="in instru2">2022</button></td> 
+                    </tr>
+            
+                </table>
+                
+            </div>
+        </div>
+    </div>
+</div>   
+</body>
+
+        
+<script src="javapop.js"></script>
+<script>
+    if (new URLSearchParams(window.location.search).get('callFunction') === 'nextQuestion()') {
+        nextQuestion();
+    }
+</script>
+    <script>
+    
+// composer portion       
+var btnCompose = document.getElementById("composers");
+var btnsComp = btnCompose.getElementsByClassName("com");
+var pickComposer;
+var pickInstrument;
+
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btnsComp.length; i++) {
+  btnsComp[i].addEventListener("click", function() {
+    var current = Array.from(btnCompose.getElementsByClassName("active1"));
+    current = current.concat((Array.from(btnCompose.getElementsByClassName("active2"))));
+    current = current.concat((Array.from(btnCompose.getElementsByClassName("active3"))));
+    current = current.concat((Array.from(btnCompose.getElementsByClassName("active4"))));
+    current = current.concat((Array.from(btnCompose.getElementsByClassName("active5"))));
+    current = current.concat((Array.from(btnCompose.getElementsByClassName("active6"))));
+
+    // If there's no active class
+    if (current.length > 0) {
+      s = current[0].id;
+      str = " active" + s;
+      current[0].className = current[0].className.replace(str, "");
+      console.log(current)
+    }
+    // Add the active class to the current/clicked button
+    s = this.id
+    str = " active" + s;
+    this.className += str;
+  });
+  
+}
+btnCompose.onclick = e => {
+    pickComposer = e.target.innerText;
+}
+
+var btnInstr = document.getElementById("instruments");
+var btnsI = btnInstr.getElementsByClassName("in");
+console.log(btnsI);
+
+// instrument portion       
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btnsI.length; i++) {
+  btnsI[i].addEventListener("click", function() {
+    var currentI = Array.from(btnInstr.getElementsByClassName("active1"));
+    currentI = currentI.concat((Array.from(btnInstr.getElementsByClassName("active2"))));
+    currentI = currentI.concat((Array.from(btnInstr.getElementsByClassName("active3"))));
+    currentI = currentI.concat((Array.from(btnInstr.getElementsByClassName("active4"))));
+    currentI = currentI.concat((Array.from(btnInstr.getElementsByClassName("active5"))));
+    currentI = currentI.concat((Array.from(btnInstr.getElementsByClassName("active6"))));
+
+    // If there's no active class
+    if (currentI.length > 0) {
+      s = currentI[0].id;
+      str = " active" + s;
+      currentI[0].className = currentI[0].className.replace(str, "");
+    }
+    // Add the active class to the current/clicked button
+    s = this.id
+    str = " active" + s;
+    this.className += str;
+  }); 
+} 
+btnInstr.onclick = e => {
+    pickInstrument = e.target.innerText;
+}
+
+        </script>
+</body>
+</html>
