@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="game.css">
 </head>
 <body>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     
     <audio preload='auto' id="audio">
     </audio>
@@ -184,9 +183,9 @@
         
 <script src="javapop.js"></script>
 <script>
-    if (new URLSearchParams(window.location.search).get('callFunction') === 'nextQuestion()') {
-        nextQuestion();
-    }
+    window.addEventListener('load', event => {
+      nextQuestion();
+    });
 </script>
     <script>
     

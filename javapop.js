@@ -37,6 +37,9 @@ const AJR = new Composer("AJR");
 const ShawnMendes = new Composer("Shawn Mendes");
 const TwentyOnePilots = new Composer("21 Pilots");
 const Maroon5 = new Composer("Maroon 5");
+const EdSheeran = new Composer("Ed Sheeran");
+const JohnLegend = new Composer("John Legend");
+const Avicii = new Composer("Avicii");
 
 AJR.AddSong('2021', 'WorldSmallestViolin', 180);
 AJR.AddSong('2019', '100BadDays', 210);
@@ -56,8 +59,21 @@ Maroon5.AddSong('2018', 'GirlsLikeYou', 250);
 Maroon5.AddSong('2019', 'Memories', 180);
 Maroon5.AddSong('2011', 'MovesLikeJagger', 200);
 
+EdSheeran.AddSong('2017', 'Perfect', 256);
+EdSheeran.AddSong('2015', 'Photograph', 255);
+EdSheeran.AddSong('2017', 'ShapeOfYou', 236);
+EdSheeran.AddSong('2014', 'ThinkingOutLoud', 343);
 
-audioComp = [AJR, ShawnMendes];
+JohnLegend.AddSong('2013', 'AllOfMe', 300);
+JohnLegend.AddSong('2016', 'StartAFire', 174);
+
+Avicii.AddSong('2013', 'WakeMeUp', 243);
+Avicii.AddSong('2015', 'WaitingForLove', 228);
+Avicii.AddSong('2014', 'TheNights', 173);
+Avicii.AddSong('2011', 'Levels', 195);
+Avicii.AddSong('2013', 'HeyBrother', 251);
+
+audioComp = [AJR, ShawnMendes, TwentyOnePilots, Maroon5, EdSheeran, JohnLegend, Avicii];
 
 
 function nextQuestion() {
@@ -65,7 +81,6 @@ function nextQuestion() {
     Objective();
     countQ = countQ + 1;
     Refresh();
-
     songComposerIndex = Math.floor(audioComp.length * Math.random());
 
     songComposer = audioComp[songComposerIndex];
@@ -261,7 +276,7 @@ function Update(point) {
 }
 
 function setTime(start){
-
+    console.log(audio)
     tot = start + elapse
     console.log(start)
     console.log(tot)
