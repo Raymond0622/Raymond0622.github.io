@@ -72,6 +72,8 @@ const Prokofiev = new Composer('Prokofiev');
 const Dvořák = new Composer('Dvořák');
 const Mozart = new Composer('Mozart');
 const Wagner = new Composer('Wagner');
+const Elgar = new Composer('Elgar');
+const Mahler = new Composer('Mahler');
 
 Wieniawski.AddSong('Violin', 'Concerto', '1', 'F-sharp-m', '14', 1700);
 
@@ -180,6 +182,8 @@ Chopin.AddSong('Piano', 'Etude', '9', 'F-m', '10', 110);
 Chopin.AddSong('Piano', 'Etude', '10', 'A-flat', '10', 130);
 Chopin.AddSong('Piano', 'Etude', '11', 'E-flat-m', '10', 190);
 Chopin.AddSong('Piano', 'Etude', '12', 'C-m', '10', 150);
+Chopin.AddSong('Piano', 'Sonata', '2', 'B-flat-m', '35', 1245);
+Chopin.AddSong('Piano', 'Sonata', '3', 'B-m', '58', 1470)
 
 Haydn.AddSong('Cello', 'Concerto', '1', 'C', 'NA', 1380);
 Haydn.AddSong('Cello', 'Concerto', '2', 'D', 'NA', 1300);
@@ -210,9 +214,21 @@ Smetana.AddSong('Piano', 'Trio', '1', 'G-m', '15', 1760);
 Smetana.AddSong('Symphony', 'NA', 'NA', 'NA','43', 630); // Moldau
 Smetana.AddSong('Strings', 'Quartet', '1', 'E-m', 'Big', 1800);
 
+Elgar.AddSong('Cello', 'Concerto', '1', 'E-m', '85', 1620);
+Elgar.AddSong('Strings', 'Strings', 'NA', 'NA', '47', 890);
+Elgar.AddSong('Elgar', 'Piano', 'Quintet', 'A-m', '84', 2240);
+
+Mahler.AddSong('Mahler', 'Symphony1', 'Symphony','2', 'C-m', NA, 1500);
+Mahler.AddSong('Mahler', 'Symphony2', 'Symphony','2', 'C-m', NA, 658);
+Mahler.AddSong('Mahler', 'Symphony3', 'Symphony','2', 'C-m', NA, 620);
+Mahler.AddSong('Mahler', 'Symphony1', 'Symphony','5', 'C-sharp-m', NA, 780);
+Mahler.AddSong('Mahler', 'Symphony2', 'Symphony','5', 'C-sharp-m', NA, 920);
+Mahler.AddSong('Mahler', 'Symphony3', 'Symphony','5', 'C-sharp-m', NA, 1118);
+Mahler.AddSong('Mahler', 'Symphony4', 'Symphony','5', 'C-sharp-m', NA, 584);
+
 audioComp = [Wieniawski, Liszt, Chopin, Haydn, Paganini, Shostakovich,
     Beethoven, Brahms, Tchaikovsky, Rachmaninoff, Schumann1, Smetana,
-    Mendelssohn, Grieg, Prokofiev];
+    Mendelssohn, Grieg, Prokofiev, Mahler];
 
 
 function nextQuestion() {
