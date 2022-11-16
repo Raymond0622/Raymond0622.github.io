@@ -218,13 +218,13 @@ Elgar.AddSong('Cello', 'Concerto', '1', 'E-m', '85', 1620);
 Elgar.AddSong('Strings', 'Strings', 'NA', 'NA', '47', 890);
 Elgar.AddSong('Elgar', 'Piano', 'Quintet', 'A-m', '84', 2240);
 
-Mahler.AddSong('Mahler', 'Symphony1', 'Symphony','2', 'C-m', 'NA', 1500);
-Mahler.AddSong('Mahler', 'Symphony2', 'Symphony','2', 'C-m', 'NA', 658);
-Mahler.AddSong('Mahler', 'Symphony3', 'Symphony','2', 'C-m', 'NA', 620);
-Mahler.AddSong('Mahler', 'Symphony1', 'Symphony','5', 'C-sharp-m', 'NA', 780);
-Mahler.AddSong('Mahler', 'Symphony2', 'Symphony','5', 'C-sharp-m', 'NA', 920);
-Mahler.AddSong('Mahler', 'Symphony3', 'Symphony','5', 'C-sharp-m', 'NA', 1118);
-Mahler.AddSong('Mahler', 'Symphony4', 'Symphony','5', 'C-sharp-m', 'NA', 584);
+Mahler.AddSong('Symphony1', 'Symphony','2', 'C-m', 'NA', 1500);
+Mahler.AddSong('Symphony2', 'Symphony','2', 'C-m', 'NA', 658);
+Mahler.AddSong('Symphony3', 'Symphony','2', 'C-m', 'NA', 620);
+Mahler.AddSong('Symphony1', 'Symphony','5', 'C-sharp-m', 'NA', 780);
+Mahler.AddSong('Symphony2', 'Symphony','5', 'C-sharp-m', 'NA', 920);
+Mahler.AddSong('Symphony3', 'Symphony','5', 'C-sharp-m', 'NA', 1118);
+Mahler.AddSong('Symphony4', 'Symphony','5', 'C-sharp-m', 'NA', 584);
 
 audioComp = [Wieniawski, Liszt, Chopin, Haydn, Paganini, Shostakovich,
     Beethoven, Brahms, Tchaikovsky, Rachmaninoff, Schumann1, Smetana,
