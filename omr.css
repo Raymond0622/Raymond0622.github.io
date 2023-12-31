@@ -1,0 +1,67 @@
+.titleSlide {
+    width: 100vw;
+    height:100vh;
+    display: flex;
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:40px
+}
+.instru {
+    position:relative;
+    justify-content:center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:25px;
+    width: 50%
+}
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+.button {
+    position: relative;
+    margin-top:20px;
+    margin-left:25px;
+    font-size:25px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    outline: 0;
+    overflow:hidden;
+    background: none;
+    z-index: 1;
+    cursor: pointer;
+    transition:         0.08s ease-in;
+    -o-transition:      0.08s ease-in;
+    -ms-transition:     0.08s ease-in;
+    -moz-transition:    0.08s ease-in;
+    -webkit-transition: 0.08s ease-in;
+
+}
+  
+.fill:hover {
+    color: whitesmoke;
+}
+  
+.fill:before {
+    content: "";
+    position: absolute;
+    background-color:green;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    -webkit-transition: top 0.09s ease-in;
+}
+  
+.fill:hover:before {
+    top: 0;
+}
+
+.A {
+    background-color: palegoldenrod
+
+}
